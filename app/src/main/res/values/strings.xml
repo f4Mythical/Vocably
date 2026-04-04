@@ -20,4 +20,6 @@
     <string name="error_fill_fields">Uzupełnij email i hasło</string>
     <string name="error_login">Błąd logowania: </string>
     <string name="error_register">Błąd rejestracji: </string>
+    <string name="hint_password_repeat">Powtórz hasło</string>
+    <string name="error_passwords_not_match">Hasła nie są identyczne</string>
 </resources>

@@ -1,64 +1,52 @@
 package com.example.vocably.Onboarding;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.fragment.app.Fragment;
 
 import com.example.vocably.MainActivity;
 import com.example.vocably.R;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.FirebaseAuth;
 
-public class Register extends Fragment {
+public class Register {
 
-    private FirebaseAuth auth;
-    private TextInputEditText etEmail, etPassword;
+    public void bind(Onboarding2 fragment) {
+        fragment.getTvTitle().setText(R.string.btn_register);
+        fragment.getBtnSubmit().setText(R.string.btn_register);
+        fragment.getTvToggle().setText(R.string.toggle_to_login);
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_onboarding2, container, false);
+        fragment.getBtnSubmit().setOnClickListener(v -> {
+            fragment.clearErrors();
+            String email          = fragment.getEtEmail().getText() != null ? fragment.getEtEmail().getText().toString().trim() : "";
+            String password       = fragment.getEtPassword().getText() != null ? fragment.getEtPassword().getText().toString().trim() : "";
+            String passwordRepeat = fragment.getEtPasswordRepeat().getText() != null ? fragment.getEtPasswordRepeat().getText().toString().trim() : "";
 
-        auth = FirebaseAuth.getInstance();
-        etEmail    = view.findViewById(R.id.etEmail);
-        etPassword = view.findViewById(R.id.etPassword);
-        Button btnSubmit    = view.findViewById(R.id.btnSubmit);
-        TextView tvTitle    = view.findViewById(R.id.tvTitle);
-        TextView tvToggle   = view.findViewById(R.id.tvToggle);
+            boolean valid = true;
+            if (email.isEmpty()) {
+                fragment.getTilEmail().setError(fragment.getString(R.string.error_fill_fields));
+                valid = false;
+            }
+            if (password.isEmpty()) {
+                fragment.getTilPassword().setError(fragment.getString(R.string.error_fill_fields));
+                valid = false;
+            }
+            if (passwordRepeat.isEmpty()) {
+                fragment.getTilPasswordRepeat().setError(fragment.getString(R.string.error_fill_fields));
+                valid = false;
+            }
+            if (!valid) return;
 
-        tvTitle.setText("Zarejestruj się");
-        btnSubmit.setText("Zarejestruj");
-        tvToggle.setText("Masz już konto? Zaloguj się");
-
-        btnSubmit.setOnClickListener(v -> {
-            String email    = etEmail.getText() != null ? etEmail.getText().toString().trim() : "";
-            String password = etPassword.getText() != null ? etPassword.getText().toString().trim() : "";
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(getContext(), "Uzupełnij email i hasło", Toast.LENGTH_SHORT).show();
+            if (!password.equals(passwordRepeat)) {
+                fragment.getTilPasswordRepeat().setError(fragment.getString(R.string.error_passwords_not_match));
                 return;
             }
-            auth.createUserWithEmailAndPassword(email, password)
+
+            fragment.getAuth().createUserWithEmailAndPassword(email, password)
                     .addOnSuccessListener(result -> {
-                        startActivity(new Intent(getActivity(), MainActivity.class));
-                        if (getActivity() != null) getActivity().finish();
+                        fragment.startActivity(new Intent(fragment.getActivity(), MainActivity.class));
+                        if (fragment.getActivity() != null) fragment.getActivity().finish();
                     })
                     .addOnFailureListener(e ->
-                            Toast.makeText(getContext(), "Błąd rejestracji: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+                            fragment.getTilEmail().setError(fragment.getString(R.string.error_register) + e.getMessage()));
         });
 
-        tvToggle.setOnClickListener(v -> {
-            if (getActivity() instanceof OnboardingActivity) {
-                ((OnboardingActivity) getActivity()).goToLogin();
-            }
-        });
-
-        return view;
+        fragment.getTvToggle().setOnClickListener(v -> fragment.switchToLogin());
     }
 }

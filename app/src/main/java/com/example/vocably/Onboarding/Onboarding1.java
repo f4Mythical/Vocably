@@ -24,8 +24,7 @@ public class Onboarding1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_onboarding1, container, false);
 
         TextView textViewGreetings = view.findViewById(R.id.textViewGreetings);
-        Button btnNext             = view.findViewById(R.id.btnNext);
-
+        TextView btnNext = view.findViewById(R.id.btnNext);
         btnNext.setVisibility(View.GONE);
 
         typeText(textViewGreetings, getString(R.string.greetings), 0, () ->
@@ -33,7 +32,7 @@ public class Onboarding1 extends Fragment {
 
         btnNext.setOnClickListener(v -> {
             if (getActivity() instanceof OnboardingActivity) {
-                ((OnboardingActivity) getActivity()).goToLogin();
+                ((OnboardingActivity) getActivity()).goToOnboarding2();
             }
         });
 

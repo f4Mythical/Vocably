@@ -37,11 +37,9 @@ public class OnboardingActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-    public void goToGreetings() { showFragment(new Onboarding1(), false); }
+    public void goToGreetings()   { showFragment(new Onboarding1(), false); }
 
-    public void goToLogin()     { showFragment(new Login(), true); }
-
-    public void goToRegister()  { showFragment(new Register(), true); }
+    public void goToOnboarding2() { showFragment(new Onboarding2(), true); }
 
     @Override
     public void onBackPressed() {

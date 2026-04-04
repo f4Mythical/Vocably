@@ -5,8 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:paddingHorizontal="40dp"
+    android:paddingHorizontal="32dp"
     android:background="@color/bg_primary">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/accent_gold" />
 
     <TextView
         android:id="@+id/textViewGreetings"
@@ -18,17 +24,18 @@
         android:lineSpacingMultiplier="1.5"
         android:gravity="center" />
 
-    <Button
+    <TextView
         android:id="@+id/btnNext"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="48dp"
         android:layout_marginTop="48dp"
+        android:background="@drawable/bg_btn_update"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:letterSpacing="0.05"
         android:text="@string/btn_start"
         android:textColor="@color/bg_primary"
-        android:textSize="15sp"
-        android:fontFamily="sans-serif-medium"
-        android:letterSpacing="0.06"
-        android:backgroundTint="@color/accent_blue"
-        android:stateListAnimator="@null" />
+        android:textSize="13sp"
+        android:visibility="gone" />
 
 </LinearLayout>
