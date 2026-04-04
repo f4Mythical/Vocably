@@ -8,6 +8,16 @@
     <string name="version_tracker_key">Klucz dostępu</string>
     <string name="ok">OK</string>
     <string name="version_update_bypass_error">Błąd wersji</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="greetings">Witaj w Vocably.\n\nNauka słówek z podręczników\nprzez fiszki, quizy\ni interaktywne tryby.</string>    <string name="greetings_subtitle">Nauka słówek z podręczników\nprzez fiszki, quizy\ni interaktywne tryby.</string>
+    <string name="btn_start">Zaczynamy</string>
+    <string name="btn_login">Zaloguj się</string>
+    <string name="btn_register">Zarejestruj się</string>
+    <string name="toggle_to_register">Nie masz konta? Zarejestruj się</string>
+    <string name="toggle_to_login">Masz już konto? Zaloguj się</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Hasło</string>
+    <string name="error_fill_fields">Uzupełnij email i hasło</string>
+    <string name="error_login">Błąd logowania: </string>
+    <string name="error_register">Błąd rejestracji: </string>
 </resources>

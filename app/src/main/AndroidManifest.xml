@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocably">
         <activity
-            android:name=".Onboarding.Onboarding"
+            android:name=".Onboarding.OnboardingActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
