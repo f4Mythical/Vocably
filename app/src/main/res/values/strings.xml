@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Vocably</string>
+    <string name="necesary_update">WYMAGANA AKTUALIZACJA</string>
+    <string name="version">Wersja 1.0.0</string>
+    <string name="version_tracker_update">Aby kontynuować, zaktualizuj aplikację do najnowszej wersji.</string>
+    <string name="version_tracker_new">CO NOWEGO</string>
+    <string name="version_tracker_update_now">AKTUALIZUJ TERAZ</string>
+    <string name="version_tracker_key">Klucz dostępu</string>
+    <string name="ok">OK</string>
+    <string name="version_update_bypass_error">Błąd wersji</string>
 </resources>
