@@ -1,9 +1,12 @@
 package com.example.vocably;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +19,9 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class TypingActivity extends AppCompatActivity {
@@ -32,15 +37,17 @@ public class TypingActivity extends AppCompatActivity {
     private TextView tvCorrectCount, tvWrongCount;
     private View     keyboardEnWrapper, keyboardDeWrapper;
 
-    private List<Word> allWords          = new ArrayList<>();
-    private int        currentIdx        = 0;
-    private String     inputBuffer       = "";
-    private boolean    checked           = false;
+    private PopupWindow activePopup = null;
+
+    private List<Word> allWords        = new ArrayList<>();
+    private int        currentIdx      = 0;
+    private String     inputBuffer     = "";
+    private boolean    checked         = false;
     private boolean    currentLangToPolish = true;
     private String     direction;
     private String     language;
-    private int        correctCount = 0;
-    private int        wrongCount   = 0;
+    private int        correctCount    = 0;
+    private int        wrongCount      = 0;
 
     private static class Word {
         String foreign;
@@ -160,7 +167,6 @@ public class TypingActivity extends AppCompatActivity {
         btnCheck.setText("Sprawdź");
 
         Word word = allWords.get(currentIdx);
-
         tvProgress.setText((currentIdx + 1) + " / " + allWords.size());
 
         if (currentLangToPolish) {
@@ -188,7 +194,7 @@ public class TypingActivity extends AppCompatActivity {
         String answer = currentLangToPolish ? word.polish : word.foreign;
 
         boolean correct = inputBuffer.trim().equalsIgnoreCase(answer.trim());
-        
+
         if (correct) {
             correctCount++;
             tvInputDisplay.setTextColor(ContextCompat.getColor(this, R.color.correct_green));
@@ -234,6 +240,29 @@ public class TypingActivity extends AppCompatActivity {
             key.setOnClickListener(v -> typeChar(ch));
         }
 
+        Map<String, String> enLongPress = new HashMap<>();
+        enLongPress.put("en_a", "ą");
+        enLongPress.put("en_e", "ę");
+        enLongPress.put("en_o", "ó");
+        enLongPress.put("en_s", "ś");
+        enLongPress.put("en_z", "ź");
+        enLongPress.put("en_x", "ż");
+        enLongPress.put("en_c", "ć");
+        enLongPress.put("en_n", "ń");
+        enLongPress.put("en_l", "ł");
+
+        for (Map.Entry<String, String> entry : enLongPress.entrySet()) {
+            int resId = getResources().getIdentifier(entry.getKey(), "id", getPackageName());
+            TextView key = findViewById(resId);
+            if (key == null) continue;
+            String ch = entry.getValue();
+            key.setOnLongClickListener(v -> {
+                showKeyPopup(v, ch);
+                typeChar(ch);
+                return true;
+            });
+        }
+
         findViewById(R.id.en_space).setOnClickListener(v -> typeChar(" "));
         findViewById(R.id.en_backspace).setOnClickListener(v -> backspace());
     }
@@ -264,6 +293,61 @@ public class TypingActivity extends AppCompatActivity {
         findViewById(R.id.de_der).setOnClickListener(v -> typeWord("der "));
         findViewById(R.id.de_die).setOnClickListener(v -> typeWord("die "));
         findViewById(R.id.de_das).setOnClickListener(v -> typeWord("das "));
+
+        Map<String, String> deLongPress = new HashMap<>();
+        deLongPress.put("de_a", "ą");
+        deLongPress.put("de_e", "ę");
+        deLongPress.put("de_o", "ó");
+        deLongPress.put("de_s", "ś");
+        deLongPress.put("de_z", "ź");
+        deLongPress.put("de_x", "ż");
+        deLongPress.put("de_c", "ć");
+        deLongPress.put("de_n", "ń");
+        deLongPress.put("de_l", "ł");
+
+        for (Map.Entry<String, String> entry : deLongPress.entrySet()) {
+            int resId = getResources().getIdentifier(entry.getKey(), "id", getPackageName());
+            TextView key = findViewById(resId);
+            if (key == null) continue;
+            String ch = entry.getValue();
+            key.setOnLongClickListener(v -> {
+                showKeyPopup(v, ch);
+                typeChar(ch);
+                return true;
+            });
+        }
+    }
+
+    private void showKeyPopup(View anchor, String character) {
+        if (activePopup != null && activePopup.isShowing()) {
+            activePopup.dismiss();
+        }
+
+        TextView popupText = new TextView(this);
+        popupText.setText(character);
+        popupText.setTextSize(24f);
+        popupText.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+        popupText.setBackgroundResource(R.drawable.bg_btn_language_selected);
+        popupText.setGravity(Gravity.CENTER);
+        popupText.setPadding(0, 8, 0, 8);
+
+        int size = (int) (anchor.getWidth() * 1.4f);
+
+        PopupWindow popup = new PopupWindow(popupText, size, anchor.getHeight() + 20, false);
+        popup.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        popup.setElevation(12f);
+
+        int[] location = new int[2];
+        anchor.getLocationInWindow(location);
+        int x = location[0] + anchor.getWidth() / 2 - size / 2;
+        int y = location[1] - anchor.getHeight() - 20;
+
+        popup.showAtLocation(anchor, Gravity.NO_GRAVITY, x, y);
+        activePopup = popup;
+
+        anchor.postDelayed(() -> {
+            if (popup.isShowing()) popup.dismiss();
+        }, 600);
     }
 
     private void typeChar(String ch) {
