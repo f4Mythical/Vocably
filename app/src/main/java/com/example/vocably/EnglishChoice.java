@@ -336,6 +336,16 @@ public class EnglishChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+        if (mode.equals("Szybkie fiszki")) {
+            Intent intent = new Intent(this, QuickFlashcardActivity.class);
+            intent.putExtra(QuickFlashcardActivity.EXTRA_LANGUAGE, "en");
+            intent.putExtra(QuickFlashcardActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(QuickFlashcardActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(QuickFlashcardActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
+
 
         // TODO: pozostałe tryby
     }
