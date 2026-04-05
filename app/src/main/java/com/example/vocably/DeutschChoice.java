@@ -355,6 +355,16 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+        if (mode.equals("Szybka odpowiedź")) {
+            Intent intent = new Intent(this, SpeedAnswerActivity.class);
+            intent.putExtra(SpeedAnswerActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(SpeedAnswerActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(SpeedAnswerActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(SpeedAnswerActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
+
 
         // TODO: pozostałe tryby
     }

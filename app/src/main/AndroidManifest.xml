@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocably">
         <activity
+            android:name=".SpeedAnswerActivity"
+            android:exported="false" />
+        <activity
             android:name=".QuickFlashcardActivity"
             android:exported="false" />
         <activity
@@ -38,12 +41,12 @@
         <activity
             android:name=".FlashcardActivity"
             android:exported="false" />
-        <activity android:name=".MemorySetupActivity"
-            android:exported="false"/>
-        <activity android:name=".MemoryActivity"
-            android:exported="false"/>
-        <activity android:name=".SpeedAnswerActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".MemorySetupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MemoryActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
