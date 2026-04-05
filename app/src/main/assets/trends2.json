@@ -1,0 +1,5321 @@
+{
+  "books": [
+    {
+      "name": "Trends",
+      "level": "2",
+      "units": [
+        {
+          "number": 1,
+          "sections": [
+            {
+              "number": "1.1",
+              "title": "",
+              "words": [
+                {
+                  "polish": "Irlandia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Irland"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Kazachstan",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Kasachstan"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Norwegia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Norwegen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Rosja",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Russland"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Ukraina",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ukraine"
+                    }
+                  ]
+                },
+                {
+                  "polish": "znany jako",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "bekannt als"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przestronny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "geräumig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rozwiedziony",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "geschieden"
+                    }
+                  ]
+                },
+                {
+                  "polish": "korzystny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "günstig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "stanu wolnego",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "ledig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "utalentowany",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "talentiert"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nietypowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "untypisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "związany z",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verbunden mit"
+                    }
+                  ]
+                },
+                {
+                  "polish": "żonaty",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verheiratet"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zamężna",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verheiratet"
+                    }
+                  ]
+                },
+                {
+                  "polish": "owdowiały",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verwitwet"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dwujęzyczny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "zweisprachig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "prowadzić blog",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "bloggen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wychowywać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "erziehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "jeść śniadanie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "frühstücken"
+                    }
+                  ]
+                },
+                {
+                  "polish": "komponować",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "komponieren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "mieszać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mischen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "meblować",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "möblieren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "produkować",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "produzieren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pisać teksty",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "texten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pisać teksty do piosenek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "texten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "samotnie wychowująca matka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "alleinerziehende Mutter"
+                    }
+                  ]
+                },
+                {
+                  "polish": "duża rodzina",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Großfamilie"
+                    }
+                  ]
+                },
+                {
+                  "polish": "mała rodzina",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Kleinfamilie"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rodzina patchworkowa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Patchworkfamilie"
+                    }
+                  ]
+                },
+                {
+                  "polish": "singiel",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Single"
+                    }
+                  ]
+                },
+                {
+                  "polish": "singielka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Single"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w poniedziałki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "montags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "we wtorki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "dienstags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w środy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mittwochs"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w czwartki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "donnerstags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w piątki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "freitags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w soboty",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "samstags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w niedziele",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sonntags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gotować",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "kochen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przyprawiać pieprzem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "pfeffern"
+                    }
+                  ]
+                },
+                {
+                  "polish": "solić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "salzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "obierać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schälen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kroić w plastry",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schneiden"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wanna",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Badewanne"
+                    }
+                  ]
+                },
+                {
+                  "polish": "prysznic",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Dusche"
+                    }
+                  ]
+                },
+                {
+                  "polish": "telewizor",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Fernseher"
+                    }
+                  ]
+                },
+                {
+                  "polish": "krzesło",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Stuhl"
+                    }
+                  ]
+                },
+                {
+                  "polish": "stół",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Tisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "umywalka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Waschbecken"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pralka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Waschmaschine"
+                    }
+                  ]
+                },
+                {
+                  "polish": "żyć samotnie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "allein leben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "codzienna sytuacja",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Alltagssituation"
+                    }
+                  ]
+                },
+                {
+                  "polish": "strach przed",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Angst vor"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ogłoszenie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Anzeige"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w żadnym wypadku",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "auf keinen Fall"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pochodzić z różnych rodzin",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "aus verschiedenen Familien kommen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "składać się z",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "bestehen aus"
+                    }
+                  ]
+                },
+                {
+                  "polish": "fan komputerów",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Computerfreak"
+                    }
+                  ]
+                },
+                {
+                  "polish": "testować gry komputerowe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Computerspiele testen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kuzyn",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Cousin"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kuzynka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Cousine"
+                    }
+                  ]
+                },
+                {
+                  "polish": "To moje marzenie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Das ist mein Traum"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Czas z nami nigdy nie jest nudny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Die Zeit mit uns ist nie langweilig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "podróżować po świecie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "durch die Welt reisen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "własne cztery ściany",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "eigene vier Wände"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wnuk",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Enkelkind"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pokolenie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Generation"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rodzeństwo",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Geschwister"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Spójrz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Guck mal"
+                    }
+                  ]
+                },
+                {
+                  "polish": "fryzjer psów",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Hundefriseur"
+                    }
+                  ]
+                },
+                {
+                  "polish": "fryzjerka psów",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Hundefriseurin"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Mam dużo do zrobienia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ich habe viel zu tun"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w misce",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "in der Schüssel"
+                    }
+                  ]
+                },
+                {
+                  "polish": "majonez",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Mayonnaise"
+                    }
+                  ]
+                },
+                {
+                  "polish": "multitalent",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Multitalent"
+                    }
+                  ]
+                },
+                {
+                  "polish": "koszty dodatkowe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Nebenkosten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Nieprawdaż",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Nicht wahr"
+                    }
+                  ]
+                },
+                {
+                  "polish": "notes",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Notizbuch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wujek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Onkel"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pieprz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Pfeffer"
+                    }
+                  ]
+                },
+                {
+                  "polish": "policjant",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Polizist"
+                    }
+                  ]
+                },
+                {
+                  "polish": "policjantka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Polizistin"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sól",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Salz"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Skandynawia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Skandinavien"
+                    }
+                  ]
+                },
+                {
+                  "polish": "odkurzać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Staub saugen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ciocia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Tante"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gracz zespołowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Teamplayer"
+                    }
+                  ]
+                },
+                {
+                  "polish": "weterynarz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Tierarzt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "weterynarz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Tierärztin"
+                    }
+                  ]
+                },
+                {
+                  "polish": "mieszkać pod jednym dachem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "unter einem Dach wohnen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "uczyć się słówek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Vokabeln lernen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Jaki przedmiot lubisz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Welches Fach magst du"
+                    }
+                  ]
+                },
+                {
+                  "polish": "robić światową karierę",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Weltkarriere machen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "na przykład",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "zum Beispiel"
+                    }
+                  ]
+                },
+                {
+                  "polish": "cebula",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Zwiebel"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "sections": [
+            {
+              "number": "2.1",
+              "title": "",
+              "words": [
+                {
+                  "polish": "język chiński",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Chinesisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język niemiecki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Deutsch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język angielski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Englisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język fiński",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Finnisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język francuski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Französisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język włoski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Italienisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język japoński",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Japanisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język norweski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Norwegisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język polski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Polnisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język portugalski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Portugiesisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język rosyjski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Russisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język szwedzki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Schwedisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język hiszpański",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Spanisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język turecki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Türkisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język węgierski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ungarisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Brazylijczyk",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Brasilianer"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Brazylijka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Brasilianerin"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Chińczyk",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Chinese"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Chinka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Chinesin"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Węgier",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ungar"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Węgierka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ungarin"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gruby",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "dick"
+                    }
+                  ]
+                },
+                {
+                  "polish": "leniwy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "faul"
+                    }
+                  ]
+                },
+                {
+                  "polish": "cierpliwy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "geduldig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "niecierpliwy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "ungeduldig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pomocny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "hilfsbereit"
+                    }
+                  ]
+                },
+                {
+                  "polish": "punktualny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "pünktlich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "niepunktualny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "unpünktlich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "szczupły",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schlank"
+                    }
+                  ]
+                },
+                {
+                  "polish": "szwedzki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schwedisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zamknięty w sobie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verschlossen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "skryty",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verschlossen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "spóźniony",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verspätet"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dwujęzyczny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "zweisprachig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wyglądać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "aussehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wymieniać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "austauschen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pozdrawiać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "begrüßen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "używać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "benutzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zwiedzać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "besichtigen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "omawiać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "besprechen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "omawiać projekt",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Projekt besprechen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "odwiedzać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "besuchen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "uczęszczać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "besuchen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przynosić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "bringen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "jeździć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "fahren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "jeździć na rowerze",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Rad fahren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pomagać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "helfen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "znać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "kennen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "poznawać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "kennen lernen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "komunikować się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "kommunizieren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kontaktować się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "kontaktieren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pożyczać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "leihen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "czytać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "lesen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "patrzeć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schauen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "patrzeć na",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schauen auf"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wysyłać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schicken"
+                    }
+                  ]
+                },
+                {
+                  "polish": "spać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schlafen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nosić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "tragen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nosić ciuchy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Klamotten tragen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "spędzać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verbringen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "spędzać czas",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Zeit verbringen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zostawać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "werden"
+                    }
+                  ]
+                },
+                {
+                  "polish": "stawać się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "werden"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pokazywać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "zeigen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "na pierwszym miejscu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "an erster Stelle"
+                    }
+                  ]
+                },
+                {
+                  "polish": "na drugim miejscu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "an zweiter Stelle"
+                    }
+                  ]
+                },
+                {
+                  "polish": "z różnych krajów",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "aus verschiedenen Ländern"
+                    }
+                  ]
+                },
+                {
+                  "polish": "bluzka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Bluse"
+                    }
+                  ]
+                },
+                {
+                  "polish": "list",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Brief"
+                    }
+                  ]
+                },
+                {
+                  "polish": "miłośnik książek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Bücherfreak"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pasjonat czytania książek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Bücherfreak"
+                    }
+                  ]
+                },
+                {
+                  "polish": "płyta CD",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "CD"
+                    }
+                  ]
+                },
+                {
+                  "polish": "równość szans",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Chancengleichheit"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dyplomata",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Diplomat"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Ty to masz dobrze",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Du hast es aber gut"
+                    }
+                  ]
+                },
+                {
+                  "polish": "On długo nie idzie spać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Er bleibt lange auf"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Europejczyk",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Europäer"
+                    }
+                  ]
+                },
+                {
+                  "polish": "prawie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "fast"
+                    }
+                  ]
+                },
+                {
+                  "polish": "płynnie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "fließend"
+                    }
+                  ]
+                },
+                {
+                  "polish": "On mówi płynnie po niemiecku",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Er spricht fließend Deutsch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język obcy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Fremdsprache"
+                    }
+                  ]
+                },
+                {
+                  "polish": "urodziny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Geburtstag"
+                    }
+                  ]
+                },
+                {
+                  "polish": "prezent",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Geschenk"
+                    }
+                  ]
+                },
+                {
+                  "polish": "telefon komórkowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Handy"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ferie jesienne",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Herbstferien"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w szwajcarskim konsulacie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "im Schweizer Konsulat"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w ambasadzie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "in der Botschaft"
+                    }
+                  ]
+                },
+                {
+                  "polish": "na całym świecie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "in der ganzen Welt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w przyszłości",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "in der Zukunft"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nastolatek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Jugendliche"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nastolatka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Jugendliche"
+                    }
+                  ]
+                },
+                {
+                  "polish": "młody człowiek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Jugendliche"
+                    }
+                  ]
+                },
+                {
+                  "polish": "większość młodych ludzi",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die meisten Jugendlichen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "książka kucharska",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Kochbuch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gotowanie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Kochen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "walizka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Koffer"
+                    }
+                  ]
+                },
+                {
+                  "polish": "logika",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Logik"
+                    }
+                  ]
+                },
+                {
+                  "polish": "projektant mody",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Modesdesigner"
+                    }
+                  ]
+                },
+                {
+                  "polish": "możliwy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "möglich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "możliwe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "möglich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język ojczysty",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Muttersprache"
+                    }
+                  ]
+                },
+                {
+                  "polish": "miłośnik przyrody",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Naturfreund"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zazwyczaj",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "normalerweise"
+                    }
+                  ]
+                },
+                {
+                  "polish": "normalnie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "normalerweise"
+                    }
+                  ]
+                },
+                {
+                  "polish": "otwartość",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Offenheit"
+                    }
+                  ]
+                },
+                {
+                  "polish": "języki oficjalne",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "offizielle Sprachen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "język oryginału",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Originalsprache"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w oryginale",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "in Originalsprache"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kartka pocztowa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Postkarte"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pocztówka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Postkarte"
+                    }
+                  ]
+                },
+                {
+                  "polish": "podróżowanie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Reisen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gra w szachy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Schachspielen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "podczas gry w szachy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "beim Schachspielen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "organizować turnieje szachowe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Schachturniere organisieren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pisarz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Schriftsteller"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ogród szkolny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Schulgarten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "statystyka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Statistik"
+                    }
+                  ]
+                },
+                {
+                  "polish": "strategia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Strategie"
+                    }
+                  ]
+                },
+                {
+                  "polish": "słodycze",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Süßigkeiten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rozmowa telefoniczna",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Telefonat"
+                    }
+                  ]
+                },
+                {
+                  "polish": "schronisko dla zwierząt",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Tierheim"
+                    }
+                  ]
+                },
+                {
+                  "polish": "weterynaria",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Tiermedizin"
+                    }
+                  ]
+                },
+                {
+                  "polish": "tolerancja",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Toleranz"
+                    }
+                  ]
+                },
+                {
+                  "polish": "T-shirt",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "T-Shirt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "z urlopu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "vom Urlaub"
+                    }
+                  ]
+                },
+                {
+                  "polish": "W jakich językach obcych mówisz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Welche Fremdsprachen sprichst du"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Czym się interesujesz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Wofür interessierst du dich"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "sections": [
+            {
+              "number": "4.1",
+              "title": "",
+              "words": [
+                {
+                  "polish": "rano",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "am Morgen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rankami",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "morgens"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przed południem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "am Vormittag"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przedpołudniami",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "vormittags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w południe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "am Mittag"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zawsze w południe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mittags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "po południu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "am Nachmittag"
+                    }
+                  ]
+                },
+                {
+                  "polish": "popołudniami",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "nachmittags"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wieczorem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "am Abend"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wieczorami",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "abends"
+                    }
+                  ]
+                },
+                {
+                  "polish": "podobny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "ähnlich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "błyskawiczny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "blitzschnell"
+                    }
+                  ]
+                },
+                {
+                  "polish": "czysty",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sauber"
+                    }
+                  ]
+                },
+                {
+                  "polish": "brudny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schmutzig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "znany na całym świecie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "weltbekannt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wartościowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "wertvoll"
+                    }
+                  ]
+                },
+                {
+                  "polish": "piekarnia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Bäckerei"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sklep odzieżowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Bekleidungsgeschäft"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kwiaciarnia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Blumengeschäft"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kwiaciarnia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Blumenladen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "księgarnia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Buchhandlung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "centrum handlowe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Einkaufszentrum"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sklepy ze sprzętem elektrycznym",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Elektromarkt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sklep spożywczy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Lebensmittelgeschäft"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sklep mięsny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Metzgerei"
+                    }
+                  ]
+                },
+                {
+                  "polish": "perfumeria",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Parfümerie"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sklep obuwniczy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Schuhgeschäft"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "4.2",
+              "title": "",
+              "words": [
+                {
+                  "polish": "oddawać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "abgeben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "odbierać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "abholen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ścierać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "abwischen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wycierać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "abwischen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zwracać uwagę na",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "achten auf"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pilnować",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "achten auf"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ubierać się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sich anziehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sprzątać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "aufräumen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wycierać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "aufwischen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ścierać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "aufwischen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wycierać podłogę",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "den Fußboden aufwischen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wyprowadzać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "ausführen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wyprowadzać psa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "den Hund ausführen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wypełniać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "ausfüllen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "prasować",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "bügeln"
+                    }
+                  ]
+                },
+                {
+                  "polish": "brać prysznic",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "duschen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zapraszać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "einladen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zasypiać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "einschlafen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "decydować się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sich entscheiden"
+                    }
+                  ]
+                },
+                {
+                  "polish": "lśnić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "glänzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "błyszczeć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "glänzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "marudzić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "meckern"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zrędzić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "meckern"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nazywać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "nennen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wymieniać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "nennen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wymieniać zalety",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Vorteile nennen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wymieniać wady",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Nachteile nennen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pasować do",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "passen zu"
+                    }
+                  ]
+                },
+                {
+                  "polish": "czyścić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "putzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "myć zęby",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Zähne putzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "reklamować",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "reklamieren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "oszczędzać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sparen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zmywać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "spülen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zmywać naczynia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Geschirr spülen"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "4.3",
+              "title": "",
+              "words": [
+                {
+                  "polish": "odkurzać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Staub saugen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kłócić się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "streiten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "spotykać się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sich treffen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wymieniać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "umtauschen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "spędzać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verbringen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "spędzać wieczór",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "den Abend verbringen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "porównywać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "vergleichen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "porównywać ceny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Preise vergleichen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "myć się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sich waschen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "robić pranie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Wäsche waschen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wynosić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "wegbringen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wynosić śmieci",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "den Müll wegbringen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wiedzieć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "wissen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "odsyłać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "zurückschicken"
+                    }
+                  ]
+                },
+                {
+                  "polish": "jest",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "es gibt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "są",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "es gibt"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "4.4",
+              "title": "",
+              "words": [
+                {
+                  "polish": "od czasu do czasu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "ab und zu"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dzień powszedni",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Alltag"
+                    }
+                  ]
+                },
+                {
+                  "polish": "odpowiadać wiekowi",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "dem Alter entsprechen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "oferta",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Angebot"
+                    }
+                  ]
+                },
+                {
+                  "polish": "szukać ofert",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "nach Angeboten suchen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "otrzymywać poradę",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Beratung bekommen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "otrzymywać pomoc",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Hilfe bekommen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "system komputerowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Computersystem"
+                    }
+                  ]
+                },
+                {
+                  "polish": "za tym",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "dafür"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przeciw(ko) temu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "dagegen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "drugie śniadanie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das zweite Frühstück"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Masz dużo do zrobienia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Du hast viel zu tun"
+                    }
+                  ]
+                },
+                {
+                  "polish": "mieć usterkę",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "einen Defekt haben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "mieć wadę",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "einen Defekt haben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zbierać doświadczenia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Erfahrungen sammeln"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w kraju i za granicą",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "im In- und Ausland"
+                    }
+                  ]
+                },
+                {
+                  "polish": "paragon",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Kassenzettel"
+                    }
+                  ]
+                },
+                {
+                  "polish": "odzież",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Kleidung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ubranie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Kleidung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "być postawionym na głowie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "kopfstehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "klient",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Kunde"
+                    }
+                  ]
+                },
+                {
+                  "polish": "artykuł spożywczy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Lebensmittel"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pomadka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Lippenstift"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rynek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Markt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "targ",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Markt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "bazar",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Markt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pójść na rynek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "auf den Markt gehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pójść na targ",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "auf den Markt gehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pójść na bazar",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "auf den Markt gehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kurs popołudniowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Nachmittagskurs"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Miło cię słyszeć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Nett, dich zu hören"
+                    }
+                  ]
+                },
+                {
+                  "polish": "porządek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Ordnung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "mieć porządek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ordnung haben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "robić porządek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ordnung machen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "obowiązek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Pflicht"
+                    }
+                  ]
+                },
+                {
+                  "polish": "platforma",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Plattform"
+                    }
+                  ]
+                },
+                {
+                  "polish": "szuflada",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Schublade"
+                    }
+                  ]
+                },
+                {
+                  "polish": "but",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Schuh"
+                    }
+                  ]
+                },
+                {
+                  "polish": "usamodzielniać się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "selbstständig werden"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rzadki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "selten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rzadko",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "selten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Ona zawsze wie wszystko lepiej",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Sie weiß immer alles besser"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Czy coś jeszcze",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Sonst noch etwas"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dzień i noc",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Tag und Nacht"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przez całą dobę",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Tag und Nacht"
+                    }
+                  ]
+                },
+                {
+                  "polish": "klawiatura",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Tastatur"
+                    }
+                  ]
+                },
+                {
+                  "polish": "papier toaletowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Toilettenpapier"
+                    }
+                  ]
+                },
+                {
+                  "polish": "towar",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Ware"
+                    }
+                  ]
+                },
+                {
+                  "polish": "proszek do prania",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Waschpulver"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co mogę dla pana zrobić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was kann ich für Sie tun"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co mogę dla pani zrobić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was kann ich für Sie tun"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co chcesz wiedzieć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was willst du wissen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "jak po tornadzie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "wie nach einem Tornado"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "sections": [
+            {
+              "number": "5.1",
+              "title": "",
+              "words": [
+                {
+                  "polish": "apteka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Apotheke"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dworzec",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Bahnhof"
+                    }
+                  ]
+                },
+                {
+                  "polish": "bank",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Bank"
+                    }
+                  ]
+                },
+                {
+                  "polish": "biblioteka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Bibliothek"
+                    }
+                  ]
+                },
+                {
+                  "polish": "księgarnia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Buchhandlung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "centrum handlowe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Einkaufszentrum"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kino",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Kino"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kościół",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Kirche"
+                    }
+                  ]
+                },
+                {
+                  "polish": "szpital",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Krankenhaus"
+                    }
+                  ]
+                },
+                {
+                  "polish": "muzeum",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Museum"
+                    }
+                  ]
+                },
+                {
+                  "polish": "poczta",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Post"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ratusz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Rathaus"
+                    }
+                  ]
+                },
+                {
+                  "polish": "boisko",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Sportplatz"
+                    }
+                  ]
+                },
+                {
+                  "polish": "świąteczny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "festlich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "położony",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "gelegen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "żywy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "lebendig"
+                    }
+                  ]
+                },
+                {
+                  "polish": "malowniczy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "malerisch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "samochodem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mit dem Auto"
+                    }
+                  ]
+                },
+                {
+                  "polish": "autobusem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mit dem Bus"
+                    }
+                  ]
+                },
+                {
+                  "polish": "motocyklem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mit dem Motorrad"
+                    }
+                  ]
+                },
+                {
+                  "polish": "tramwajem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mit der Straßenbahn"
+                    }
+                  ]
+                },
+                {
+                  "polish": "taksówką",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mit dem Taxi"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pociągiem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mit dem Zug"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "5.2",
+              "title": "",
+              "words": [
+                {
+                  "polish": "wypożyczać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "ausleihen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wysiadać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "aussteigen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "piec",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "backen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wsiadać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "einsteigen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przeżywać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "erleben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przeżywać na żywo",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "live erleben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "opłacać się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sich lohnen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "opłaca się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "es lohnt sich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zaskakiwać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "überraschen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wybierać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "wählen"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "5.3",
+              "title": "",
+              "words": [
+                {
+                  "polish": "adwent",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Advent"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wieniec adwentowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Adventskranz"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Alpy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Alpen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w Alpach",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "in den Alpen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sygnalizator świetlny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Ampel"
+                    }
+                  ]
+                },
+                {
+                  "polish": "na światłach",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "an der Ampel"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przybycie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Ankunft"
+                    }
+                  ]
+                },
+                {
+                  "polish": "autostrada",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Autobahn"
+                    }
+                  ]
+                },
+                {
+                  "polish": "spojrzenie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Blick"
+                    }
+                  ]
+                },
+                {
+                  "polish": "widok",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Blick"
+                    }
+                  ]
+                },
+                {
+                  "polish": "mieć świetny widok",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "einen tollen Blick haben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wzajemnie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "ebenfalls"
+                    }
+                  ]
+                },
+                {
+                  "polish": "róg",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Ecke"
+                    }
+                  ]
+                },
+                {
+                  "polish": "za rogiem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "um die Ecke"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ulica jednokierunkowa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Einbahnstraße"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dozwolony",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "erlaubt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nadchodzi Boże Narodzenie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "es weihnachtet"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "5.4",
+              "title": "",
+              "words": [
+                {
+                  "polish": "biletomat",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Fahrkartenautomat"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pojazd",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Fahrzeug"
+                    }
+                  ]
+                },
+                {
+                  "polish": "możliwość spędzania czasu wolnego",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Freizeitmöglichkeit"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dla młodszych i starszych",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "für Alt und Jung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dla każdego",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "für Alt und Jung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gęś",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Gans"
+                    }
+                  ]
+                },
+                {
+                  "polish": "potrawa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Gericht"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Nie ma za co",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Gern geschehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Dobrej drogi",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Gute Fahrt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przystanek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Haltestelle"
+                    }
+                  ]
+                },
+                {
+                  "polish": "na przystanku",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "an der Haltestelle"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Wigilia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Heiligabend"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w Wigilię",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "am Heiligabend"
+                    }
+                  ]
+                },
+                {
+                  "polish": "w Wigilię",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "am Heiligen Abend"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Nie mogę się doczekać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ich kann es kaum erwarten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zmiana roku",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Jahreswechsel"
+                    }
+                  ]
+                },
+                {
+                  "polish": "karnawał",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Karneval"
+                    }
+                  ]
+                },
+                {
+                  "polish": "karp",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Karpfen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kostium",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Kostüm"
+                    }
+                  ]
+                },
+                {
+                  "polish": "skrzyżowanie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Kreuzung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "na skrzyżowaniu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "an der Kreuzung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "do skrzyżowania",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "bis zur Kreuzung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "piernik",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Lebkuchen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pierniczek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Lebkuchen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ulubione miejsce",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Lieblingsplatz"
+                    }
+                  ]
+                },
+                {
+                  "polish": "maska",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Maske"
+                    }
+                  ]
+                },
+                {
+                  "polish": "widzieć na własne oczy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mit eigenen Augen sehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "imieniny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Namenstag"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Wielkanoc",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Ostern"
+                    }
+                  ]
+                },
+                {
+                  "polish": "iść przez park",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "durch den Park gehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "iść przez plac",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "über den Platz gehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "korytarz życia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Rettungsgasse"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zalecana maksymalna prędkość",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Richtgeschwindigkeit"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zabytek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Sehenswürdigkeit"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sylwester",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Silvester"
+                    }
+                  ]
+                },
+                {
+                  "polish": "sylwester",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Silvester"
+                    }
+                  ]
+                },
+                {
+                  "polish": "bal sylwestrowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Silvesterball"
+                    }
+                  ]
+                },
+                {
+                  "polish": "stoisko",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Stand"
+                    }
+                  ]
+                },
+                {
+                  "polish": "korek komunikacyjny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Stau"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ryzyko tworzenia się korków",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Staugefahr"
+                    }
+                  ]
+                },
+                {
+                  "polish": "strucla",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Stollen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "czyn karny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Straftat"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przechodzić przez ulicę",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "über die Straße gehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "taryfa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Tarif"
+                    }
+                  ]
+                },
+                {
+                  "polish": "objazd",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Umleitung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wypadek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Unfall"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wypożyczalnia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Verleih"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wypożyczalnia samochodów",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Autoverleih"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wypożyczalnia rowerów",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Fahrradverleih"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co ma znaczyć to pytanie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was soll die Frage"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Boże Narodzenie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Weihnachten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "choinka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Weihnachtsbaum"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kolęda",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Weihnachtslied"
+                    }
+                  ]
+                },
+                {
+                  "polish": "jarmark bożonarodzeniowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Weihnachtsmarkt"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ciasteczko bożonarodzeniowe",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Weihnachtsplätzchen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pociąg",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Zug"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przyjechać pociągiem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "mit dem Zug kommen"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "sections": [
+            {
+              "number": "6.1",
+              "title": "",
+              "words": [
+                {
+                  "polish": "ręka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Arm"
+                    }
+                  ]
+                },
+                {
+                  "polish": "oko",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Auge"
+                    }
+                  ]
+                },
+                {
+                  "polish": "brzuch",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Bauch"
+                    }
+                  ]
+                },
+                {
+                  "polish": "noga",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Bein"
+                    }
+                  ]
+                },
+                {
+                  "polish": "klatka piersiowa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Brust"
+                    }
+                  ]
+                },
+                {
+                  "polish": "palec u ręki",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Finger"
+                    }
+                  ]
+                },
+                {
+                  "polish": "stopa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Fuß"
+                    }
+                  ]
+                },
+                {
+                  "polish": "włos",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Haar"
+                    }
+                  ]
+                },
+                {
+                  "polish": "szyja",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Hals"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gardło",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Hals"
+                    }
+                  ]
+                },
+                {
+                  "polish": "dłoń",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Hand"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kolano",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Knie"
+                    }
+                  ]
+                },
+                {
+                  "polish": "głowa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Kopf"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ciało",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Körper"
+                    }
+                  ]
+                },
+                {
+                  "polish": "usta",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Mund"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nos",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Nase"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ucho",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Ohr"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pupa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Po"
+                    }
+                  ]
+                },
+                {
+                  "polish": "plecy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Rücken"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ząb",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Zahn"
+                    }
+                  ]
+                },
+                {
+                  "polish": "palec u nogi",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Zehe"
+                    }
+                  ]
+                },
+                {
+                  "polish": "angina",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Angina"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gorączka",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Fieber"
+                    }
+                  ]
+                },
+                {
+                  "polish": "grypa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Grippe"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kaszel",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Husten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "problem ze snem",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Schlafstörung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ból",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Schmerz"
+                    }
+                  ]
+                },
+                {
+                  "polish": "bóle brzucha",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Bauchschmerzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "bóle głowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Kopfschmerzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "bóle uszu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ohrenschmerzen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "katar",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Schnupfen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "poparzenie słoneczne",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Sonnenbrand"
+                    }
+                  ]
+                },
+                {
+                  "polish": "porażenie słoneczne",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Sonnenstich"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "6.2",
+              "title": "",
+              "words": [
+                {
+                  "polish": "oglądać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sich anschauen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "oddychać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "atmen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "leczyc",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "behandeln"
+                    }
+                  ]
+                },
+                {
+                  "polish": "leczyc pacjentów",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Patienten behandeln"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przyjmować",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "einnehmen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "patrzeć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "gucken"
+                    }
+                  ]
+                },
+                {
+                  "polish": "mieć nadzieję",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "hoffen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "kaszleć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "husten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wystawiać zwolnienie lekarskie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "krankschreiben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "wietrzyć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "lüften"
+                    }
+                  ]
+                },
+                {
+                  "polish": "badać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "untersuchen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zapominać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "vergessen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przypuszczać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "vermuten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zalecać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verordnen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zapisywać",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "verschreiben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zapisywać lekarstwa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Medikamente verschreiben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "boleć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "weh tun"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Boli mnie głowa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Der Kopf tut mir weh"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Bolą mnie nogi",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Die Beine tun mir weh"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zwracać się do",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "sich wenden an"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pilny",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "dringend"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pilnie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "dringend"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przeziębiony",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "erkältet"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zdrowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "gesund"
+                    }
+                  ]
+                },
+                {
+                  "polish": "chory",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "krank"
+                    }
+                  ]
+                },
+                {
+                  "polish": "słaby",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "schwach"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zadowolony",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "zufrieden"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "6.3",
+              "title": "",
+              "words": [
+                {
+                  "polish": "pojęcie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Ahnung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Nie mam pojęcia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ich habe keine Ahnung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "antybiotyk",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Antibiotikum"
+                    }
+                  ]
+                },
+                {
+                  "polish": "gabinet lekarski",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Arztpraxis"
+                    }
+                  ]
+                },
+                {
+                  "polish": "być u lekarza",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "beim Arzt sein"
+                    }
+                  ]
+                },
+                {
+                  "polish": "pogotowie górskie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Bergwacht"
+                    }
+                  ]
+                },
+                {
+                  "polish": "poprawa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Besserung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Szybkiego powrotu do zdrowia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Gute Besserung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "leżenie w łóżku",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Bettruhe"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zalecać leżenie w łóżku",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Bettruhe verordnen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ruch",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Bewegung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "umawiać wizytę u lekarza",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "einen Termin beim Arzt machen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "obywatel UE",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der EU-Bürger"
+                    }
+                  ]
+                },
+                {
+                  "polish": "być bardzo zmęczonym",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "fix und fertig sein"
+                    }
+                  ]
+                },
+                {
+                  "polish": "potrzebować świeżego powietrza",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "frische Luft brauchen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "tracić cierpliwość",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Geduld verlieren"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Spójrz tutaj",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Guck mal hier"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Martwię się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ich mache mir Sorgen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ubezpieczenie na wypadek choroby",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Krankenversicherung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "karta ubezpieczenia zdrowotnego",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Krankenversicherungskarte"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zwolnienie lekarskie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Krankschreibung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Nie martw się",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Mach dir keine Sorgen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "masaż",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Massage"
+                    }
+                  ]
+                },
+                {
+                  "polish": "lekarstwo",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Medikament"
+                    }
+                  ]
+                },
+                {
+                  "polish": "otworzyć usta",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "den Mund aufmachen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "krople do nosa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Nasentropfen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "izba przyjęć",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Notaufnahme"
+                    }
+                  ]
+                },
+                {
+                  "polish": "nagły wypadek",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Notfall"
+                    }
+                  ]
+                },
+                {
+                  "polish": "numer alarmowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Notrufnummer"
+                    }
+                  ]
+                },
+                {
+                  "polish": "rozebrać się do pasa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "den Oberkörper frei machen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zapisywać krople do uszu",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Ohrentropfen verschreiben"
+                    }
+                  ]
+                },
+                {
+                  "polish": "potrzebować profesjonalnej pomocy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "professionelle Hilfe brauchen"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "6.4",
+              "title": "",
+              "words": [
+                {
+                  "polish": "karetka pogotowia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "der Rettungswagen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "recepta",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "das Rezept"
+                    }
+                  ]
+                },
+                {
+                  "polish": "prześwietlenie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Röntgenaufnahme"
+                    }
+                  ]
+                },
+                {
+                  "polish": "zdjęcie rentgenowskie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Röntgenaufnahme"
+                    }
+                  ]
+                },
+                {
+                  "polish": "maść",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Salbe"
+                    }
+                  ]
+                },
+                {
+                  "polish": "tabletka przeciwbólowa",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Schmerztablette"
+                    }
+                  ]
+                },
+                {
+                  "polish": "ratownictwo morskie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Seenotrettung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Od kiedy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Seit wann"
+                    }
+                  ]
+                },
+                {
+                  "polish": "od tygodnia",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "seit einer Woche"
+                    }
+                  ]
+                },
+                {
+                  "polish": "od miesiąca",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "seit einem Monat"
+                    }
+                  ]
+                },
+                {
+                  "polish": "od roku",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "seit einem Jahr"
+                    }
+                  ]
+                },
+                {
+                  "polish": "syrop przeciwkaszlowy",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Sirup gegen Husten"
+                    }
+                  ]
+                },
+                {
+                  "polish": "badanie",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "die Untersuchung"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co ci dolega",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was fehlt dir"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co panu dolega",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was fehlt Ihnen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co pani dolega",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was fehlt Ihnen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co ci jest",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was hast du denn"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co mam zrobić",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was soll ich tun"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co cię boli",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was tut dir weh"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co pana boli",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was tut Ihnen weh"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Co panią boli",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Was tut Ihnen weh"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Jak się czujesz",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Wie fühlst du dich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Jak się pan czuje",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Wie fühlen Sie sich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "Jak się pani czuje",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "Wie fühlen Sie sich"
+                    }
+                  ]
+                },
+                {
+                  "polish": "iść do lekarza",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "zum Arzt gehen"
+                    }
+                  ]
+                },
+                {
+                  "polish": "przychodzić na kontrolę",
+                  "translations": [
+                    {
+                      "language": "de",
+                      "value": "zur Kontrolle kommen"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

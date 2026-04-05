@@ -15,11 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocably">
         <activity
+            android:name=".EnglishChoice"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".Onboarding.OnboardingActivity"
             android:exported="false" />
+        <activity android:name=".DeutschChoice" android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

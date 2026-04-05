@@ -1,0 +1,337 @@
+package com.example.vocably;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class DeutschChoice extends AppCompatActivity {
+
+    private LinearLayout booksRow, unitsContainer, sectionsSection, sectionsContainer;
+    private LinearLayout directionRow, quizSection, quizContainer;
+    private TextView btnDirLangToPolish, btnDirPolishToLang, btnDirRandom;
+    private TextView selectedUnitBtn = null;
+    private View booksScrollView;
+
+    private String selectedDirection = "lang_to_polish";
+    private final Map<Integer, List<String>> selectedSections = new HashMap<>();
+
+    private static final String[] BOOK_FILES = {
+
+            "trends1.json", "trends2.json", "trends3.json", "trends4.json"
+    };
+
+    private static final String[] QUIZ_MODES = {
+            "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
+            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista"
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_language_choice);
+
+        booksScrollView    = findViewById(R.id.booksScrollView);
+        booksRow           = findViewById(R.id.booksRow);
+        directionRow       = findViewById(R.id.directionRow);
+        unitsContainer     = findViewById(R.id.unitsContainer);
+        sectionsSection    = findViewById(R.id.sectionsSection);
+        sectionsContainer  = findViewById(R.id.sectionsContainer);
+        quizSection        = findViewById(R.id.quizSection);
+        quizContainer      = findViewById(R.id.quizContainer);
+        btnDirLangToPolish = findViewById(R.id.btnDirLangToPolish);
+        btnDirPolishToLang = findViewById(R.id.btnDirPolishToLang);
+        btnDirRandom       = findViewById(R.id.btnDirRandom);
+
+        String savedDir = getSharedPreferences("vocably_prefs", Context.MODE_PRIVATE)
+                .getString("direction_de", "lang_to_polish");
+        selectedDirection = savedDir;
+
+        btnDirLangToPolish.setText("Niemiecki → Polski");
+        btnDirPolishToLang.setText("Polski → Niemiecki");
+
+        btnDirLangToPolish.setOnClickListener(v -> selectDirection("lang_to_polish"));
+        btnDirPolishToLang.setOnClickListener(v -> selectDirection("polish_to_lang"));
+        btnDirRandom.setOnClickListener(v -> selectDirection("random"));
+
+        loadBooks();
+    }
+
+    private void loadBooks() {
+        booksRow.removeAllViews();
+        boolean anyFound = false;
+
+        for (String file : BOOK_FILES) {
+            JSONObject json = loadJson(file);
+            if (json == null) continue;
+            anyFound = true;
+
+            try {
+                JSONArray books = json.getJSONArray("books");
+                if (books.length() == 0) continue;
+                JSONObject book = books.getJSONObject(0);
+                String name  = book.getString("name");
+                String level = book.getString("level");
+
+                TextView btn = new TextView(this);
+                btn.setText(name + "\nPoziom " + level);
+                btn.setGravity(android.view.Gravity.CENTER);
+                btn.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+                btn.setTextSize(13f);
+                btn.setLineSpacing(0, 1.3f);
+                btn.setBackground(ContextCompat.getDrawable(this, R.drawable.bg_btn_language));
+
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dpToPx(120), dpToPx(64));
+                params.setMarginEnd(dpToPx(10));
+                btn.setLayoutParams(params);
+
+                final JSONObject bookJson = book;
+                btn.setOnClickListener(v -> selectBook(bookJson, btn));
+                booksRow.addView(btn);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        booksScrollView.setVisibility(anyFound ? View.VISIBLE : View.GONE);
+    }
+
+    private void selectBook(JSONObject bookJson, TextView selectedBtn) {
+        selectedSections.clear();
+        selectedUnitBtn = null;
+        unitsContainer.removeAllViews();
+        sectionsSection.setVisibility(View.GONE);
+        sectionsContainer.removeAllViews();
+        quizSection.setVisibility(View.GONE);
+        directionRow.setVisibility(View.GONE);
+
+        for (int i = 0; i < booksRow.getChildCount(); i++) {
+            booksRow.getChildAt(i).setBackgroundResource(R.drawable.bg_btn_language);
+        }
+        selectedBtn.setBackgroundResource(R.drawable.bg_btn_language_selected);
+
+        loadUnits(bookJson);
+    }
+
+    private void loadUnits(JSONObject bookJson) {
+        unitsContainer.removeAllViews();
+
+        try {
+            JSONArray units = bookJson.getJSONArray("units");
+            int cols = 4;
+            LinearLayout currentRow = null;
+
+            for (int i = 0; i < units.length(); i++) {
+                JSONObject unit = units.getJSONObject(i);
+                int unitNumber = unit.getInt("number");
+
+                if (i % cols == 0) {
+                    currentRow = new LinearLayout(this);
+                    currentRow.setOrientation(LinearLayout.HORIZONTAL);
+                    LinearLayout.LayoutParams rowParams = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                    rowParams.setMargins(0, 0, 0, dpToPx(8));
+                    currentRow.setLayoutParams(rowParams);
+                    unitsContainer.addView(currentRow);
+                }
+
+                TextView unitBtn = new TextView(this);
+                unitBtn.setText("Unit " + unitNumber);
+                unitBtn.setGravity(android.view.Gravity.CENTER);
+                unitBtn.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+                unitBtn.setTextSize(13f);
+                unitBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.bg_btn_language));
+
+                LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(0, dpToPx(48), 1f);
+                btnParams.setMargins(0, 0, i % cols == cols - 1 ? 0 : dpToPx(8), 0);
+                unitBtn.setLayoutParams(btnParams);
+
+                final JSONObject finalUnit = unit;
+                final int finalUnitNumber = unitNumber;
+                unitBtn.setOnClickListener(v -> selectUnit(unitBtn, finalUnit, finalUnitNumber));
+                currentRow.addView(unitBtn);
+            }
+
+            if (units.length() % cols != 0) {
+                int remaining = cols - (units.length() % cols);
+                for (int i = 0; i < remaining; i++) {
+                    View spacer = new View(this);
+                    LinearLayout.LayoutParams sp = new LinearLayout.LayoutParams(0, dpToPx(48), 1f);
+                    sp.setMargins(0, 0, i == remaining - 1 ? 0 : dpToPx(8), 0);
+                    spacer.setLayoutParams(sp);
+                    currentRow.addView(spacer);
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        findViewById(R.id.unitsSection).setVisibility(View.VISIBLE);
+    }
+
+    private void selectUnit(TextView unitBtn, JSONObject unit, int unitNumber) {
+        if (selectedUnitBtn != null) {
+            selectedUnitBtn.setBackgroundResource(R.drawable.bg_btn_language);
+        }
+        selectedUnitBtn = unitBtn;
+        unitBtn.setBackgroundResource(R.drawable.bg_btn_language_selected);
+
+        selectedSections.clear();
+        sectionsContainer.removeAllViews();
+        quizSection.setVisibility(View.GONE);
+
+        loadSections(unit, unitNumber);
+    }
+
+    private void loadSections(JSONObject unit, int unitNumber) {
+        sectionsContainer.removeAllViews();
+
+        try {
+            JSONArray sections = unit.getJSONArray("sections");
+            List<String> defaultSelected = new ArrayList<>();
+
+            for (int j = 0; j < sections.length(); j++) {
+                JSONObject section = sections.getJSONObject(j);
+                if (!section.has("number") || !section.has("words")) continue;
+
+                String sectionNumber = section.getString("number");
+                JSONArray words = section.getJSONArray("words");
+                if (words.length() == 0) continue;
+
+                String sectionTitle = section.optString("title", "");
+                String label = sectionNumber + (sectionTitle.isEmpty() ? "" : "  " + sectionTitle);
+                defaultSelected.add(sectionNumber);
+
+                TextView sectionBtn = new TextView(this);
+                sectionBtn.setText(label);
+                sectionBtn.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+                sectionBtn.setTextSize(13f);
+                sectionBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.bg_btn_language_selected));
+
+                LinearLayout.LayoutParams sParams = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(48));
+                sParams.setMargins(0, 0, 0, dpToPx(8));
+                sectionBtn.setLayoutParams(sParams);
+                sectionBtn.setGravity(android.view.Gravity.CENTER_VERTICAL | android.view.Gravity.START);
+                sectionBtn.setPadding(dpToPx(16), 0, dpToPx(16), 0);
+
+                final String finalSectionNumber = sectionNumber;
+                sectionBtn.setOnClickListener(v -> {
+                    List<String> list = selectedSections.getOrDefault(unitNumber, new ArrayList<>());
+                    if (list.contains(finalSectionNumber)) {
+                        list.remove(finalSectionNumber);
+                        sectionBtn.setBackgroundResource(R.drawable.bg_btn_language);
+                    } else {
+                        list.add(finalSectionNumber);
+                        sectionBtn.setBackgroundResource(R.drawable.bg_btn_language_selected);
+                    }
+                    selectedSections.put(unitNumber, list);
+                    updateQuiz();
+                });
+
+                sectionsContainer.addView(sectionBtn);
+            }
+
+            selectedSections.put(unitNumber, defaultSelected);
+            sectionsSection.setVisibility(View.VISIBLE);
+            updateQuiz();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void updateQuiz() {
+        boolean any = false;
+        for (List<String> list : selectedSections.values()) {
+            if (!list.isEmpty()) { any = true; break; }
+        }
+
+        if (!any) {
+            quizSection.setVisibility(View.GONE);
+            directionRow.setVisibility(View.GONE);
+            return;
+        }
+
+        directionRow.setVisibility(View.VISIBLE);
+        updateDirectionButtons();
+        showQuizModes();
+    }
+
+    private void showQuizModes() {
+        quizContainer.removeAllViews();
+
+        for (String mode : QUIZ_MODES) {
+            TextView modeBtn = new TextView(this);
+            modeBtn.setText(mode);
+            modeBtn.setGravity(android.view.Gravity.CENTER);
+            modeBtn.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
+            modeBtn.setTextSize(14f);
+            modeBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.bg_btn_language));
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(52));
+            params.setMargins(0, 0, 0, dpToPx(8));
+            modeBtn.setLayoutParams(params);
+            modeBtn.setPadding(dpToPx(16), 0, dpToPx(16), 0);
+
+            modeBtn.setOnClickListener(v -> startQuiz(mode));
+            quizContainer.addView(modeBtn);
+        }
+
+        quizSection.setVisibility(View.VISIBLE);
+    }
+
+    private void startQuiz(String mode) {
+        // TODO
+    }
+
+    private void selectDirection(String dir) {
+        selectedDirection = dir;
+        getSharedPreferences("vocably_prefs", Context.MODE_PRIVATE)
+                .edit()
+                .putString("direction_de", dir)
+                .apply();
+        updateDirectionButtons();
+    }
+
+    private void updateDirectionButtons() {
+        int active   = R.drawable.bg_btn_language_selected;
+        int inactive = R.drawable.bg_btn_language;
+        btnDirLangToPolish.setBackgroundResource(selectedDirection.equals("lang_to_polish") ? active : inactive);
+        btnDirPolishToLang.setBackgroundResource(selectedDirection.equals("polish_to_lang") ? active : inactive);
+        btnDirRandom.setBackgroundResource(selectedDirection.equals("random") ? active : inactive);
+    }
+
+    private JSONObject loadJson(String fileName) {
+        try {
+            InputStream is = getAssets().open(fileName);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            return new JSONObject(new String(buffer, StandardCharsets.UTF_8));
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private int dpToPx(int dp) {
+        return Math.round(dp * getResources().getDisplayMetrics().density);
+    }
+}

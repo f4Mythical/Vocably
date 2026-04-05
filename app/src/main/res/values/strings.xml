@@ -23,8 +23,8 @@
     <string name="hint_password_repeat">Powtórz hasło</string>
     <string name="error_passwords_not_match">Hasła nie są identyczne</string>
     <string name="home_language">JĘZYK</string>
-    <string name="home_english">🇬🇧 Angielski</string>
-    <string name="home_german">🇩🇪 Niemiecki</string>
+    <string name="home_english">Angielski</string>
+    <string name="home_german">Niemiecki</string>
     <string name="home_recent_books">OSTATNIE KSIĄŻKI</string>
     <string name="home_no_recent">Brak ostatnio otwartych książek</string>
 
@@ -34,4 +34,6 @@
     <string name="dir_polish_to_lang">Polski → Język</string>
     <string name="dir_random">Losowo</string>
     <string name="home_sections">ROZDZIAŁY</string>
+    <string name="home_quiz_mode">TRYB NAUKI</string>
+    <string name="home_books">PODRĘCZNIK</string>
 </resources>
