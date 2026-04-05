@@ -187,8 +187,8 @@ public class TypingActivity extends AppCompatActivity {
         Word word = allWords.get(currentIdx);
         String answer = currentLangToPolish ? word.polish : word.foreign;
 
-        boolean correct = inputBuffer.trim().equals(answer.trim());
-
+        boolean correct = inputBuffer.trim().equalsIgnoreCase(answer.trim());
+        
         if (correct) {
             correctCount++;
             tvInputDisplay.setTextColor(ContextCompat.getColor(this, R.color.correct_green));
