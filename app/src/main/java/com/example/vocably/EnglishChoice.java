@@ -346,6 +346,16 @@ public class EnglishChoice extends AppCompatActivity {
             return;
         }
 
+        // TODO: LOSOWE JAK ZROBIE RESZTE
+        if (mode.equals("Memory")) {
+            Intent intent = new Intent(this, MemorySetupActivity.class);
+            intent.putExtra(MemorySetupActivity.EXTRA_LANGUAGE, "en");
+            intent.putExtra(MemorySetupActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(MemorySetupActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(MemorySetupActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
 
         // TODO: pozostałe tryby
     }
