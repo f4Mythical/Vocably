@@ -24,6 +24,7 @@
             android:name=".Onboarding.OnboardingActivity"
             android:exported="false" />
         <activity android:name=".DeutschChoice" android:exported="false" />
+        <activity android:name=".FlashcardActivity" android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

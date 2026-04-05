@@ -9,4 +9,10 @@
     <color name="accent_gold">#B2A584</color>
     <color name="text_primary">#E5E5E5</color>
     <color name="text_secondary">#58534C</color>
+    <color name="correct_green">#4CAF50</color>
+    <color name="error_red">#F44336</color>
+    <color name="surface_elevated">#1E1E24</color>
+    <color name="surface">#1A1A1F</color>
+    <color name="divider">#2e2e36</color>
+    <color name="accent">#e8c84a</color>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.vocably;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -30,9 +31,11 @@ public class EnglishChoice extends AppCompatActivity {
     private String selectedDirection = "lang_to_polish";
     private final Map<Integer, List<String>> selectedSections = new HashMap<>();
 
+    private String  currentBookFile  = null;
+    private int     currentUnitNumber = -1;
+
     private static final String[] BOOK_FILES = {
             "focus1.json", "focus2.json", "focus3.json", "focus4.json"
-
     };
 
     private static final String[] QUIZ_MODES = {
@@ -57,9 +60,8 @@ public class EnglishChoice extends AppCompatActivity {
         btnDirPolishToLang = findViewById(R.id.btnDirPolishToLang);
         btnDirRandom       = findViewById(R.id.btnDirRandom);
 
-        String savedDir = getSharedPreferences("vocably_prefs", Context.MODE_PRIVATE)
+        selectedDirection = getSharedPreferences("vocably_prefs", Context.MODE_PRIVATE)
                 .getString("direction_en", "lang_to_polish");
-        selectedDirection = savedDir;
 
         btnDirLangToPolish.setText("Angielski → Polski");
         btnDirPolishToLang.setText("Polski → Angielski");
@@ -100,7 +102,8 @@ public class EnglishChoice extends AppCompatActivity {
                 btn.setLayoutParams(params);
 
                 final JSONObject bookJson = book;
-                btn.setOnClickListener(v -> selectBook(bookJson, btn));
+                final String bookFile = file;
+                btn.setOnClickListener(v -> selectBook(bookJson, btn, bookFile));
                 booksRow.addView(btn);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -110,9 +113,11 @@ public class EnglishChoice extends AppCompatActivity {
         booksScrollView.setVisibility(anyFound ? View.VISIBLE : View.GONE);
     }
 
-    private void selectBook(JSONObject bookJson, TextView selectedBtn) {
+    private void selectBook(JSONObject bookJson, TextView selectedBtn, String bookFile) {
+        currentBookFile = bookFile;
         selectedSections.clear();
         selectedUnitBtn = null;
+        currentUnitNumber = -1;
         unitsContainer.removeAllViews();
         sectionsSection.setVisibility(View.GONE);
         sectionsContainer.removeAllViews();
@@ -190,6 +195,7 @@ public class EnglishChoice extends AppCompatActivity {
         }
         selectedUnitBtn = unitBtn;
         unitBtn.setBackgroundResource(R.drawable.bg_btn_language_selected);
+        currentUnitNumber = unitNumber;
 
         selectedSections.clear();
         sectionsContainer.removeAllViews();
@@ -298,7 +304,21 @@ public class EnglishChoice extends AppCompatActivity {
     }
 
     private void startQuiz(String mode) {
-        // TODO
+        if (currentBookFile == null || currentUnitNumber == -1) return;
+        List<String> sections = selectedSections.get(currentUnitNumber);
+        if (sections == null || sections.isEmpty()) return;
+
+        if (mode.equals("Fiszki")) {
+            Intent intent = new Intent(this, FlashcardActivity.class);
+            intent.putExtra(FlashcardActivity.EXTRA_LANGUAGE, "en");
+            intent.putExtra(FlashcardActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(FlashcardActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(FlashcardActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
+
+        // TODO: pozostałe tryby
     }
 
     private void selectDirection(String dir) {
