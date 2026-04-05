@@ -318,6 +318,16 @@ public class EnglishChoice extends AppCompatActivity {
             return;
         }
 
+        if (mode.equals("Wpisz")) {
+            Intent intent = new Intent(this, TypingActivity.class);
+            intent.putExtra(TypingActivity.EXTRA_LANGUAGE, "en");
+            intent.putExtra(TypingActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(TypingActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(TypingActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
+
         // TODO: pozostałe tryby
     }
 
