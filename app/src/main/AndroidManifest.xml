@@ -47,6 +47,8 @@
         <activity
             android:name=".MemoryActivity"
             android:exported="false" />
+        <activity android:name=".WordListActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
