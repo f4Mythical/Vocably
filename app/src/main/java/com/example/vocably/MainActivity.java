@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        createUserCollection();
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
     }
 
     private void createUserCollection() {

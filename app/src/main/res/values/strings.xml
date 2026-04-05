@@ -9,7 +9,7 @@
     <string name="ok">OK</string>
     <string name="version_update_bypass_error">Błąd wersji</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="greetings">Witaj w Vocably.\n\nNauka słówek z podręczników\nprzez fiszki, quizy\ni interaktywne tryby.</string>    <string name="greetings_subtitle">Nauka słówek z podręczników\nprzez fiszki, quizy\ni interaktywne tryby.</string>
+    <string name="greetings">Witaj w Vocably.\n\nNauka słówek z podręczników\nprzez fiszki, quizy\ni interaktywne tryby.</string>
     <string name="btn_start">Zaczynamy</string>
     <string name="btn_login">Zaloguj się</string>
     <string name="btn_register">Zarejestruj się</string>
@@ -22,4 +22,9 @@
     <string name="error_register">Błąd rejestracji: </string>
     <string name="hint_password_repeat">Powtórz hasło</string>
     <string name="error_passwords_not_match">Hasła nie są identyczne</string>
+    <string name="home_language">JĘZYK</string>
+    <string name="home_english">🇬🇧 Angielski</string>
+    <string name="home_german">🇩🇪 Niemiecki</string>
+    <string name="home_recent_books">OSTATNIE KSIĄŻKI</string>
+    <string name="home_no_recent">Brak ostatnio otwartych książek</string>
 </resources>
