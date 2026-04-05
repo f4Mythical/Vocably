@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboardDe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Rodzajniki -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/de_der"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="der"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/accent"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_btn_language" />
+
+        <TextView
+            android:id="@+id/de_die"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="die"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/accent"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_btn_language" />
+
+        <TextView
+            android:id="@+id/de_das"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="das"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/accent"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_btn_language" />
+
+    </LinearLayout>
+
+    <!-- Znaki specjalne -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="6dp">
+
+        <TextView android:id="@+id/de_ae" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="ä" android:gravity="center" android:textSize="18sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language_selected" />
+        <TextView android:id="@+id/de_oe" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="ö" android:gravity="center" android:textSize="18sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language_selected" />
+        <TextView android:id="@+id/de_ue" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="ü" android:gravity="center" android:textSize="18sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language_selected" />
+        <TextView android:id="@+id/de_sz" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="ß" android:gravity="center" android:textSize="18sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language_selected" />
+
+    </LinearLayout>
+
+    <!-- Rząd 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="6dp">
+
+        <TextView android:id="@+id/de_q" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="Q" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_w" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="W" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_e" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="E" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_r" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="R" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_t" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="T" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_z" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="Z" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_u" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="U" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_i" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="I" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_o" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="O" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_p" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="P" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+
+    </LinearLayout>
+
+    <!-- Rząd 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="6dp">
+
+        <TextView android:id="@+id/de_a" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="A" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_s" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="S" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_d" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="D" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_f" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="F" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_g" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="G" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_h" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="H" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_j" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="J" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_k" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="K" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_l" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="L" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+
+    </LinearLayout>
+
+    <!-- Rząd 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="6dp">
+
+        <TextView android:id="@+id/de_y" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="Y" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_x" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="X" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_c" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="C" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_v" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="V" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_b" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="B" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_n" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="N" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+        <TextView android:id="@+id/de_m" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:text="M" android:gravity="center" android:textSize="16sp" android:textColor="@color/text_primary" android:background="@drawable/bg_btn_language" />
+
+    </LinearLayout>
+
+    <!-- Spacja + backspace -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/de_space"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="4"
+            android:layout_marginEnd="4dp"
+            android:text="SPACJA"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:background="@drawable/bg_btn_language" />
+
+        <TextView
+            android:id="@+id/de_backspace"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="2"
+            android:text="⌫"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_btn_language" />
+
+    </LinearLayout>
+
+</LinearLayout>
