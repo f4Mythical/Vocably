@@ -41,17 +41,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
                     android:textColor="@color/accent_blue"
-                    android:fontFamily="sans-serif-light"
-                    android:layout_marginEnd="12dp" />
-
-                <ImageView
-                    android:id="@+id/btnSettings"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_settings"
-                    android:padding="6dp"
-                    android:background="@drawable/bg_btn_language"
-                    android:scaleType="centerInside" />
+                    android:fontFamily="sans-serif-light" />
 
             </LinearLayout>
 
@@ -102,6 +92,19 @@
 
     </ScrollView>
 
+    <ImageView
+        android:id="@+id/btnSettings"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_settings"
+        android:padding="10dp"
+        android:background="@drawable/bg_btn_language_selected"
+        android:scaleType="centerInside"
+        android:elevation="6dp" />
+
     <View
         android:id="@+id/menuScrim"
         android:layout_width="match_parent"
@@ -113,8 +116,8 @@
         layout="@layout/menu_settings_overlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|end"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="92dp" />
 
 </FrameLayout>

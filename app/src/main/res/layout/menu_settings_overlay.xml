@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settingsMenu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_settings_menu"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="8dp"
+    android:elevation="12dp"
+    android:visibility="invisible">
+
+    <ImageView
+        android:id="@+id/menuItemProfile"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_menu_profile"
+        android:padding="10dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    <ImageView
+        android:id="@+id/menuItemFeedback"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_menu_feedback"
+        android:padding="10dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    <ImageView
+        android:id="@+id/menuItemInfo"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_menu_info"
+        android:padding="10dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>

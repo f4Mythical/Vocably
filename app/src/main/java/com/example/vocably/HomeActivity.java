@@ -89,58 +89,59 @@ public class HomeActivity extends AppCompatActivity {
         menuOpen = true;
 
         btnSettings.animate()
-                .rotation(90f)
-                .setDuration(300)
+                .rotationBy(405f)
+                .setDuration(650)
                 .setInterpolator(new DecelerateInterpolator())
-                .start();
+                .withEndAction(() -> {
+                    menuScrim.setVisibility(View.VISIBLE);
+                    menuScrim.setAlpha(0f);
+                    menuScrim.animate()
+                            .alpha(1f)
+                            .setDuration(180)
+                            .start();
 
-        menuScrim.setVisibility(View.VISIBLE);
-        menuScrim.setAlpha(0f);
-        menuScrim.animate()
-                .alpha(1f)
-                .setDuration(200)
-                .start();
+                    settingsMenu.setVisibility(View.VISIBLE);
+                    settingsMenu.setAlpha(0f);
+                    settingsMenu.setTranslationY(50f);
+                    settingsMenu.setScaleY(0.85f);
+                    settingsMenu.setPivotY(settingsMenu.getHeight());
 
-        settingsMenu.setVisibility(View.VISIBLE);
-        settingsMenu.setAlpha(0f);
-        settingsMenu.setTranslationY(-40f);
-        settingsMenu.setScaleY(0.85f);
-        settingsMenu.setPivotY(0f);
-
-        settingsMenu.animate()
-                .alpha(1f)
-                .translationY(0f)
-                .scaleY(1f)
-                .setDuration(280)
-                .setInterpolator(new OvershootInterpolator(1.2f))
+                    settingsMenu.animate()
+                            .alpha(1f)
+                            .translationY(0f)
+                            .scaleY(1f)
+                            .setDuration(280)
+                            .setInterpolator(new OvershootInterpolator(1.1f))
+                            .start();
+                })
                 .start();
     }
 
     private void closeMenu() {
         menuOpen = false;
 
-        btnSettings.animate()
-                .rotation(0f)
-                .setDuration(300)
-                .setInterpolator(new DecelerateInterpolator())
-                .start();
-
         menuScrim.animate()
                 .alpha(0f)
-                .setDuration(180)
+                .setDuration(150)
                 .withEndAction(() -> menuScrim.setVisibility(View.GONE))
                 .start();
 
         settingsMenu.animate()
                 .alpha(0f)
-                .translationY(-30f)
+                .translationY(40f)
                 .scaleY(0.88f)
-                .setDuration(200)
+                .setDuration(180)
                 .setInterpolator(new DecelerateInterpolator())
                 .withEndAction(() -> {
                     settingsMenu.setVisibility(View.INVISIBLE);
                     settingsMenu.setTranslationY(0f);
                     settingsMenu.setScaleY(1f);
+
+                    btnSettings.animate()
+                            .rotationBy(-405f)
+                            .setDuration(650)
+                            .setInterpolator(new DecelerateInterpolator())
+                            .start();
                 })
                 .start();
     }
