@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocably">
         <activity
+            android:name=".ChoiceActivity"
+            android:exported="false" />
+        <activity
             android:name=".TypingActivity"
             android:exported="false" />
         <activity

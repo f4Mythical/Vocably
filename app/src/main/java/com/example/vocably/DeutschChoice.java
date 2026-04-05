@@ -327,6 +327,15 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+        if (mode.equals("Wybór")) {
+            Intent intent = new Intent(this, ChoiceActivity.class);
+            intent.putExtra(ChoiceActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(ChoiceActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(ChoiceActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(ChoiceActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
 
         // TODO: pozostałe tryby
     }
