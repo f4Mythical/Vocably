@@ -32,10 +32,11 @@ public class TypingActivity extends AppCompatActivity {
     private TextView tvCorrectCount, tvWrongCount;
     private View     keyboardEnWrapper, keyboardDeWrapper;
 
-    private List<Word> allWords    = new ArrayList<>();
-    private int        currentIdx  = 0;
-    private String     inputBuffer = "";
-    private boolean    checked     = false;
+    private List<Word> allWords          = new ArrayList<>();
+    private int        currentIdx        = 0;
+    private String     inputBuffer       = "";
+    private boolean    checked           = false;
+    private boolean    currentLangToPolish = true;
     private String     direction;
     private String     language;
     private int        correctCount = 0;
@@ -151,6 +152,7 @@ public class TypingActivity extends AppCompatActivity {
 
         checked = false;
         inputBuffer = "";
+        currentLangToPolish = resolveDirection();
         tvInputDisplay.setText("");
         tvInputDisplay.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
         tvInputDisplay.setBackgroundResource(R.drawable.bg_btn_language);
@@ -158,11 +160,10 @@ public class TypingActivity extends AppCompatActivity {
         btnCheck.setText("Sprawdź");
 
         Word word = allWords.get(currentIdx);
-        boolean langToPolish = resolveDirection();
 
         tvProgress.setText((currentIdx + 1) + " / " + allWords.size());
 
-        if (langToPolish) {
+        if (currentLangToPolish) {
             tvPromptLang.setText(getForeignLangLabel());
             tvPrompt.setText(word.foreign);
         } else {
@@ -184,8 +185,7 @@ public class TypingActivity extends AppCompatActivity {
         checked = true;
 
         Word word = allWords.get(currentIdx);
-        boolean langToPolish = resolveDirection();
-        String answer = langToPolish ? word.polish : word.foreign;
+        String answer = currentLangToPolish ? word.polish : word.foreign;
 
         boolean correct = inputBuffer.trim().equals(answer.trim());
 
