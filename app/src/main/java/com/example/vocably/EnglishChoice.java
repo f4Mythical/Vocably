@@ -346,7 +346,15 @@ public class EnglishChoice extends AppCompatActivity {
             return;
         }
 
-        // TODO: LOSOWE JAK ZROBIE RESZTE
+        if (mode.equals("Losowa nauka")) {
+            String language = "en";
+            String[] randomModes = {
+                    "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki", "Memory", "Szybka odpowiedź"
+            };
+            String randomMode = randomModes[(int) (Math.random() * randomModes.length)];
+            startQuiz(randomMode);
+            return;
+        }
         if (mode.equals("Memory")) {
             Intent intent = new Intent(this, MemorySetupActivity.class);
             intent.putExtra(MemorySetupActivity.EXTRA_LANGUAGE, "en");
@@ -376,7 +384,6 @@ public class EnglishChoice extends AppCompatActivity {
         }
 
 
-        // TODO: pozostałe tryby
     }
 
     private void selectDirection(String dir) {

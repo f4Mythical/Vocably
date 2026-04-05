@@ -294,7 +294,7 @@ public class DeutschChoice extends AppCompatActivity {
                     LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(52));
             params.setMargins(0, 0, 0, dpToPx(8));
             modeBtn.setLayoutParams(params);
-            modeBtn.setPadding(dpToPx(16), 0, dpToPx(16), 0);
+            modeBtn.setPadding(0, 0, 0, 0);
 
             modeBtn.setOnClickListener(v -> startQuiz(mode));
             quizContainer.addView(modeBtn);
@@ -327,6 +327,7 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+
         if (mode.equals("Wybór")) {
             Intent intent = new Intent(this, ChoiceActivity.class);
             intent.putExtra(ChoiceActivity.EXTRA_LANGUAGE, "de");
@@ -336,6 +337,7 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+
         if (mode.equals("Szybkie fiszki")) {
             Intent intent = new Intent(this, QuickFlashcardActivity.class);
             intent.putExtra(QuickFlashcardActivity.EXTRA_LANGUAGE, "de");
@@ -345,7 +347,7 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
-        // TODO: LOSOWE JAK ZROBIE RESZTE
+
         if (mode.equals("Memory")) {
             Intent intent = new Intent(this, MemorySetupActivity.class);
             intent.putExtra(MemorySetupActivity.EXTRA_LANGUAGE, "de");
@@ -353,6 +355,15 @@ public class DeutschChoice extends AppCompatActivity {
             intent.putExtra(MemorySetupActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(MemorySetupActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
             startActivity(intent);
+            return;
+        }
+        if (mode.equals("Losowa nauka")) {
+            String language = "de";
+            String[] randomModes = {
+                    "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki", "Memory", "Szybka odpowiedź"
+            };
+            String randomMode = randomModes[(int) (Math.random() * randomModes.length)];
+            startQuiz(randomMode);
             return;
         }
         if (mode.equals("Szybka odpowiedź")) {
@@ -364,6 +375,7 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+
         if (mode.equals("Lista")) {
             Intent intent = new Intent(this, WordListActivity.class);
             intent.putExtra(WordListActivity.EXTRA_LANGUAGE, "de");
@@ -373,9 +385,6 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
-
-
-        // TODO: pozostałe tryby
     }
 
     private void selectDirection(String dir) {
