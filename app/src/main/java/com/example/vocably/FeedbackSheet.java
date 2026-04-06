@@ -26,6 +26,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,6 +44,8 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
     private ActivityResultLauncher<Intent> photoPickerLauncher;
     private ActivityResultLauncher<String> permissionLauncher;
 
+    private static final long COOLDOWN_MS = 30 * 60 * 1000;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,17 +54,26 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
         photoPickerLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
+                    android.util.Log.d("FeedbackSheet", "Picker result code: " + result.getResultCode());
+                    android.util.Log.d("FeedbackSheet", "Picker data: " + result.getData());
                     if (result.getResultCode() == Activity.RESULT_OK && result.getData() != null) {
                         selectedPhotos.clear();
                         if (result.getData().getClipData() != null) {
                             int count = result.getData().getClipData().getItemCount();
+                            android.util.Log.d("FeedbackSheet", "ClipData count: " + count);
                             for (int i = 0; i < count; i++) {
                                 selectedPhotos.add(result.getData().getClipData().getItemAt(i).getUri());
                             }
                         } else if (result.getData().getData() != null) {
+                            android.util.Log.d("FeedbackSheet", "Single photo: " + result.getData().getData());
                             selectedPhotos.add(result.getData().getData());
+                        } else {
+                            android.util.Log.d("FeedbackSheet", "No data in result");
                         }
+                        android.util.Log.d("FeedbackSheet", "Total selected photos: " + selectedPhotos.size());
                         updatePhotoPreviews();
+                    } else {
+                        android.util.Log.d("FeedbackSheet", "Result not OK or data null");
                     }
                 }
         );
@@ -69,6 +81,7 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
         permissionLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
                 granted -> {
+                    android.util.Log.d("FeedbackSheet", "Permission result: " + granted);
                     if (granted) {
                         openPhotoPicker();
                     } else {
@@ -77,7 +90,6 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
                 }
         );
     }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent, @Nullable Bundle state) {
@@ -94,28 +106,36 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
     private void requestPhotoPermissionOrOpen() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             String permission = android.Manifest.permission.READ_MEDIA_IMAGES;
-            if (ContextCompat.checkSelfPermission(requireContext(), permission) == PackageManager.PERMISSION_GRANTED) {
+            int status = ContextCompat.checkSelfPermission(requireContext(), permission);
+            android.util.Log.d("FeedbackSheet", "Android 13+, permission status: " + status + " (0=granted, -1=denied)");
+            if (status == PackageManager.PERMISSION_GRANTED) {
+                android.util.Log.d("FeedbackSheet", "Permission granted, opening picker");
                 openPhotoPicker();
             } else {
+                android.util.Log.d("FeedbackSheet", "Requesting permission");
                 permissionLauncher.launch(permission);
             }
         } else {
             String permission = android.Manifest.permission.READ_EXTERNAL_STORAGE;
-            if (ContextCompat.checkSelfPermission(requireContext(), permission) == PackageManager.PERMISSION_GRANTED) {
+            int status = ContextCompat.checkSelfPermission(requireContext(), permission);
+            android.util.Log.d("FeedbackSheet", "Android <13, permission status: " + status);
+            if (status == PackageManager.PERMISSION_GRANTED) {
+                android.util.Log.d("FeedbackSheet", "Permission granted, opening picker");
                 openPhotoPicker();
             } else {
+                android.util.Log.d("FeedbackSheet", "Requesting permission");
                 permissionLauncher.launch(permission);
             }
         }
     }
 
     private void openPhotoPicker() {
+        android.util.Log.d("FeedbackSheet", "openPhotoPicker called");
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
         photoPickerLauncher.launch(Intent.createChooser(intent, "Wybierz zdjęcia"));
     }
-
     private void showCategories() {
         currentCategory = null;
         container.removeAllViews();
@@ -296,18 +316,44 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
     private void sendFeedback(Map<String, Object> data) {
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        data.put("uid",       uid);
-        data.put("createdAt", Timestamp.now());
+        Timestamp cutoff = new Timestamp(
+                (System.currentTimeMillis() - COOLDOWN_MS) / 1000, 0);
 
         FirebaseFirestore.getInstance()
                 .collection("feedback")
-                .add(data)
-                .addOnSuccessListener(ref -> {
-                    Toast.makeText(getContext(), "Dziękujemy za feedback!", Toast.LENGTH_SHORT).show();
-                    dismiss();
+                .whereEqualTo("uid", uid)
+                .whereGreaterThan("createdAt", cutoff)
+                .limit(1)
+                .get()
+                .addOnSuccessListener(snap -> {
+                    if (!snap.isEmpty()) {
+                        Toast.makeText(getContext(),
+                                "Możesz wysłać feedback co 30 minut",
+                                Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    data.put("uid",       uid);
+                    data.put("createdAt", Timestamp.now());
+
+                    FirebaseFirestore.getInstance()
+                            .collection("feedback")
+                            .add(data)
+                            .addOnSuccessListener(ref -> {
+                                Toast.makeText(getContext(),
+                                        "Dziękujemy za feedback!",
+                                        Toast.LENGTH_SHORT).show();
+                                dismiss();
+                            })
+                            .addOnFailureListener(e ->
+                                    Toast.makeText(getContext(),
+                                            "Błąd wysyłania, spróbuj ponownie",
+                                            Toast.LENGTH_SHORT).show());
                 })
                 .addOnFailureListener(e ->
-                        Toast.makeText(getContext(), "Błąd wysyłania, spróbuj ponownie", Toast.LENGTH_SHORT).show());
+                        Toast.makeText(getContext(),
+                                "Błąd wysyłania, spróbuj ponownie",
+                                Toast.LENGTH_SHORT).show());
     }
 
     private String getText(TextInputEditText et) {
