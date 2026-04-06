@@ -12,7 +12,7 @@
         android:id="@+id/accentBar"
         android:layout_width="0dp"
         android:layout_height="3dp"
-        android:background="#F5C842"
+        android:background="@color/accent_gold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +25,7 @@
         android:fontFamily="sans-serif-medium"
         android:letterSpacing="0.08"
         android:text="@string/necesary_update"
-        android:textColor="#F5C842"
+        android:textColor="@color/accent_gold"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/accentBar" />

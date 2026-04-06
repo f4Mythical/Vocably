@@ -32,6 +32,7 @@ public class DeutschChoice extends AppCompatActivity {
     private final Map<Integer, List<String>> selectedSections = new HashMap<>();
 
     private String currentBookFile   = null;
+    private String currentBookName   = "";
     private int    currentUnitNumber = -1;
 
     private static final String[] BOOK_FILES = {
@@ -40,7 +41,7 @@ public class DeutschChoice extends AppCompatActivity {
 
     private static final String[] QUIZ_MODES = {
             "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
-            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista", "Litera po literze","Prawda czy Fałsz",
+            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista", "Litera po literze", "Prawda czy Fałsz",
             "Ułóż słowo"
     };
 
@@ -116,6 +117,7 @@ public class DeutschChoice extends AppCompatActivity {
 
     private void selectBook(JSONObject bookJson, TextView selectedBtn, String bookFile) {
         currentBookFile = bookFile;
+        try { currentBookName = bookJson.getString("name"); } catch (Exception e) { currentBookName = ""; }
         selectedSections.clear();
         selectedUnitBtn = null;
         currentUnitNumber = -1;
@@ -304,10 +306,26 @@ public class DeutschChoice extends AppCompatActivity {
         quizSection.setVisibility(View.VISIBLE);
     }
 
+    private void saveSession(String mode, List<String> sections) {
+        SessionManager.Session s = new SessionManager.Session();
+        s.language   = "de";
+        s.bookFile   = currentBookFile;
+        s.bookName   = currentBookName;
+        s.unitNumber = currentUnitNumber;
+        s.sections   = new ArrayList<>(sections);
+        s.direction  = selectedDirection;
+        s.mode       = mode;
+        SessionManager.save(this, s);
+    }
+
     private void startQuiz(String mode) {
         if (currentBookFile == null || currentUnitNumber == -1) return;
         List<String> sections = selectedSections.get(currentUnitNumber);
         if (sections == null || sections.isEmpty()) return;
+
+        if (!mode.equals("Losowa nauka")) {
+            saveSession(mode, sections);
+        }
 
         if (mode.equals("Fiszki")) {
             Intent intent = new Intent(this, FlashcardActivity.class);
@@ -358,17 +376,17 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+
         if (mode.equals("Losowa nauka")) {
-            String language = "de";
             String[] randomModes = {
                     "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki", "Memory",
-                    "Szybka odpowiedź","Litera po literze","Prawda czy Fałsz",
-                    "Ułóż słowo"
+                    "Szybka odpowiedź", "Litera po literze", "Prawda czy Fałsz", "Ułóż słowo"
             };
             String randomMode = randomModes[(int) (Math.random() * randomModes.length)];
             startQuiz(randomMode);
             return;
         }
+
         if (mode.equals("Szybka odpowiedź")) {
             Intent intent = new Intent(this, SpeedAnswerActivity.class);
             intent.putExtra(SpeedAnswerActivity.EXTRA_LANGUAGE, "de");
@@ -388,6 +406,7 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+
         if (mode.equals("Litera po literze")) {
             Intent intent = new Intent(this, LetterByLetterActivity.class);
             intent.putExtra(LetterByLetterActivity.EXTRA_LANGUAGE, "de");
@@ -397,6 +416,7 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+
         if (mode.equals("Prawda czy Fałsz")) {
             Intent intent = new Intent(this, TrueFalseActivity.class);
             intent.putExtra(TrueFalseActivity.EXTRA_LANGUAGE, "de");
@@ -406,6 +426,7 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+
         if (mode.equals("Ułóż słowo")) {
             Intent intent = new Intent(this, ScrambleActivity.class);
             intent.putExtra(ScrambleActivity.EXTRA_LANGUAGE, "de");
