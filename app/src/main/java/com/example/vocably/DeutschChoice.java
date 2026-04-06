@@ -40,7 +40,8 @@ public class DeutschChoice extends AppCompatActivity {
 
     private static final String[] QUIZ_MODES = {
             "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
-            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista", "Litera po literze","Prawda czy Fałsz"
+            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista", "Litera po literze","Prawda czy Fałsz",
+            "Ułóż słowo"
     };
 
     @Override
@@ -361,7 +362,8 @@ public class DeutschChoice extends AppCompatActivity {
             String language = "de";
             String[] randomModes = {
                     "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki", "Memory",
-                    "Szybka odpowiedź","Litera po literze","Prawda czy Fałsz"
+                    "Szybka odpowiedź","Litera po literze","Prawda czy Fałsz",
+                    "Ułóż słowo"
             };
             String randomMode = randomModes[(int) (Math.random() * randomModes.length)];
             startQuiz(randomMode);
@@ -401,6 +403,15 @@ public class DeutschChoice extends AppCompatActivity {
             intent.putExtra(TrueFalseActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(TrueFalseActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(TrueFalseActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
+        if (mode.equals("Ułóż słowo")) {
+            Intent intent = new Intent(this, ScrambleActivity.class);
+            intent.putExtra(ScrambleActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(ScrambleActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(ScrambleActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(ScrambleActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
             startActivity(intent);
             return;
         }

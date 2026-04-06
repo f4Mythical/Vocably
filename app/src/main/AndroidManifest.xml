@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocably">
         <activity
+            android:name=".ScrambleActivity"
+            android:exported="false" />
+        <activity
             android:name=".TrueFalseActivity"
             android:exported="false" />
         <activity
