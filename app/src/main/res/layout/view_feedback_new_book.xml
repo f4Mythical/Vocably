@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLanguage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:hint="Język">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilBook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:hint="Podręcznik">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:hint="Klasa">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnAddPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="Dodaj zdjęcia"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/bg_btn_language"
+        android:layout_marginBottom="8dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/photosPreviewContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Treść (opcjonalnie)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="Wyślij"
+        android:textSize="15sp"
+        android:textColor="@color/bg_primary"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/bg_btn_accent" />
+
+</LinearLayout>

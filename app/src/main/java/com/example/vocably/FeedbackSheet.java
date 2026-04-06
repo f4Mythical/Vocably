@@ -2,7 +2,9 @@ package com.example.vocably;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.textfield.TextInputEditText;
@@ -38,6 +41,7 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
     private LinearLayout photosPreviewContainer;
 
     private ActivityResultLauncher<Intent> photoPickerLauncher;
+    private ActivityResultLauncher<String> permissionLauncher;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,6 +65,17 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
                     }
                 }
         );
+
+        permissionLauncher = registerForActivityResult(
+                new ActivityResultContracts.RequestPermission(),
+                granted -> {
+                    if (granted) {
+                        openPhotoPicker();
+                    } else {
+                        Toast.makeText(getContext(), "Brak uprawnień do zdjęć", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
     }
 
     @Nullable
@@ -76,6 +91,31 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
         showCategories();
     }
 
+    private void requestPhotoPermissionOrOpen() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            String permission = android.Manifest.permission.READ_MEDIA_IMAGES;
+            if (ContextCompat.checkSelfPermission(requireContext(), permission) == PackageManager.PERMISSION_GRANTED) {
+                openPhotoPicker();
+            } else {
+                permissionLauncher.launch(permission);
+            }
+        } else {
+            String permission = android.Manifest.permission.READ_EXTERNAL_STORAGE;
+            if (ContextCompat.checkSelfPermission(requireContext(), permission) == PackageManager.PERMISSION_GRANTED) {
+                openPhotoPicker();
+            } else {
+                permissionLauncher.launch(permission);
+            }
+        }
+    }
+
+    private void openPhotoPicker() {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+        photoPickerLauncher.launch(Intent.createChooser(intent, "Wybierz zdjęcia"));
+    }
+
     private void showCategories() {
         currentCategory = null;
         container.removeAllViews();
@@ -89,8 +129,6 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
 
         container.addView(v);
     }
-
-
 
     private void showWordError() {
         currentCategory = "word_error";
@@ -121,7 +159,6 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
         container.addView(v);
     }
 
-
     private void showSuggestion() {
         currentCategory = "suggestion";
         container.removeAllViews();
@@ -143,7 +180,6 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
         container.addView(v);
     }
 
-
     private void showNewBook() {
         currentCategory = "new_book";
         selectedPhotos.clear();
@@ -158,12 +194,7 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
         photosPreviewContainer       = v.findViewById(R.id.photosPreviewContainer);
         TextView btnSend             = v.findViewById(R.id.btnSend);
 
-        btnAddPhotos.setOnClickListener(x -> {
-            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-            intent.setType("image/*");
-            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-            photoPickerLauncher.launch(Intent.createChooser(intent, "Wybierz zdjęcia"));
-        });
+        btnAddPhotos.setOnClickListener(x -> requestPhotoPermissionOrOpen());
 
         btnSend.setOnClickListener(x -> {
             Map<String, Object> data = new HashMap<>();
@@ -202,8 +233,6 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
         }
     }
 
-
-
     private void showTechProblem() {
         currentCategory = "tech_problem";
         container.removeAllViews();
@@ -224,7 +253,6 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
 
         container.addView(v);
     }
-
 
     private void showRate() {
         currentCategory = "rate";
@@ -264,7 +292,6 @@ public class FeedbackSheet extends BottomSheetDialogFragment {
 
         container.addView(v);
     }
-
 
     private void sendFeedback(Map<String, Object> data) {
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Treść">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="4"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="Wyślij"
+        android:textSize="15sp"
+        android:textColor="@color/bg_primary"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/bg_btn_accent" />
+
+</LinearLayout>

@@ -37,7 +37,6 @@ android {
 dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
-    implementation(libs.activity)
     implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
@@ -46,4 +45,5 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-auth")
+    implementation("androidx.activity:activity:1.9.0")
 }
