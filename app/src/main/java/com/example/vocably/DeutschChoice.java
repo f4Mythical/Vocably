@@ -40,7 +40,7 @@ public class DeutschChoice extends AppCompatActivity {
 
     private static final String[] QUIZ_MODES = {
             "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
-            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista", "Litera po literze"
+            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista", "Litera po literze","Prawda czy Fałsz"
     };
 
     @Override
@@ -360,7 +360,8 @@ public class DeutschChoice extends AppCompatActivity {
         if (mode.equals("Losowa nauka")) {
             String language = "de";
             String[] randomModes = {
-                    "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki", "Memory", "Szybka odpowiedź","Litera po literze"
+                    "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki", "Memory",
+                    "Szybka odpowiedź","Litera po literze","Prawda czy Fałsz"
             };
             String randomMode = randomModes[(int) (Math.random() * randomModes.length)];
             startQuiz(randomMode);
@@ -391,6 +392,15 @@ public class DeutschChoice extends AppCompatActivity {
             intent.putExtra(LetterByLetterActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(LetterByLetterActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(LetterByLetterActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
+        if (mode.equals("Prawda czy Fałsz")) {
+            Intent intent = new Intent(this, TrueFalseActivity.class);
+            intent.putExtra(TrueFalseActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(TrueFalseActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(TrueFalseActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(TrueFalseActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
             startActivity(intent);
             return;
         }
