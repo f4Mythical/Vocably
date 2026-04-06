@@ -19,8 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocably">
         <activity
+            android:name=".LetterByLetterActivity"
+            android:exported="false" />
+        <activity
             android:name=".InformationActivity"
             android:exported="false" />
+
         <activity
             android:name=".FeedbackSheet"
             android:exported="false" />
@@ -63,8 +67,6 @@
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
-        <activity android:name=".InformationActivity"
-            android:exported="false"/>
 
         <activity
             android:name=".MainActivity"

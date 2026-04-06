@@ -40,7 +40,8 @@ public class EnglishChoice extends AppCompatActivity {
 
     private static final String[] QUIZ_MODES = {
             "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
-            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista"
+            "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista",
+            "Litera po literze"
     };
 
     @Override
@@ -349,7 +350,7 @@ public class EnglishChoice extends AppCompatActivity {
         if (mode.equals("Losowa nauka")) {
             String language = "en";
             String[] randomModes = {
-                    "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki", "Memory", "Szybka odpowiedź"
+                    "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki", "Memory", "Szybka odpowiedź","Litera po literze"
             };
             String randomMode = randomModes[(int) (Math.random() * randomModes.length)];
             startQuiz(randomMode);
@@ -382,7 +383,15 @@ public class EnglishChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
-
+        if (mode.equals("Litera po literze")) {
+            Intent intent = new Intent(this, LetterByLetterActivity.class);
+            intent.putExtra(LetterByLetterActivity.EXTRA_LANGUAGE, "en");
+            intent.putExtra(LetterByLetterActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(LetterByLetterActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(LetterByLetterActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
 
     }
 
