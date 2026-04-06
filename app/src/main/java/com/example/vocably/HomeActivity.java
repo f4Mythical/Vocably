@@ -73,7 +73,10 @@ public class HomeActivity extends AppCompatActivity {
         btnSettings.setOnClickListener(v -> toggleMenu());
         menuScrim.setOnClickListener(v -> closeMenu());
 
-        settingsMenu.findViewById(R.id.menuItemProfile).setOnClickListener(v -> closeMenu());
+        settingsMenu.findViewById(R.id.menuItemProfile).setOnClickListener(v -> {
+            closeMenu();
+            startActivity(new Intent(this, ProfileActivity.class));
+        });
         settingsMenu.findViewById(R.id.menuItemFeedback).setOnClickListener(v -> closeMenu());
         settingsMenu.findViewById(R.id.menuItemInfo).setOnClickListener(v -> closeMenu());
 
