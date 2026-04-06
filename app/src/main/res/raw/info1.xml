@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <info>
     <title>Nowe tryby nauki</title>
-    <version>1.2.0</version>
+    <version>1.0.0</version>
     <changes>
-        <item>Dodano tryb Memory z wyborem układu planszy</item>
-        <item>Dodano tryb Szybka odpowiedź z suwakiem czasu</item>
-        <item>Dodano Listę słówek z falowaną granicą</item>
-        <item>Poprawiono błąd losowego kierunku w trybie Wpisz</item>
+        <item>Ostatnia wersja</item>
+
     </changes>
-    <date>18:30 · 12 kwietnia 2025</date>
+    <date>13:15 · 06 kwietnia 2025</date>
 </info>

@@ -32,11 +32,27 @@ public class InformationActivity extends AppCompatActivity {
         LinearLayout container = findViewById(R.id.infoContainer);
         LayoutInflater inflater = LayoutInflater.from(this);
 
+        List<InfoEntry> entries = new ArrayList<>();
         int index = 1;
         while (true) {
             InfoEntry entry = loadInfo("info" + index);
             if (entry == null) break;
+            entries.add(entry);
+            index++;
+        }
 
+        entries.sort((a, b) -> {
+            String[] partsA = a.version.split("\\.");
+            String[] partsB = b.version.split("\\.");
+            for (int i = 0; i < Math.max(partsA.length, partsB.length); i++) {
+                int numA = i < partsA.length ? Integer.parseInt(partsA[i]) : 0;
+                int numB = i < partsB.length ? Integer.parseInt(partsB[i]) : 0;
+                if (numA != numB) return Integer.compare(numB, numA);
+            }
+            return 0;
+        });
+
+        for (InfoEntry entry : entries) {
             View card = inflater.inflate(R.layout.item_info_card, container, false);
 
             TextView tvTitle = card.findViewById(R.id.tvTitle);
@@ -57,7 +73,6 @@ public class InformationActivity extends AppCompatActivity {
             tvDate.setText(entry.date);
 
             container.addView(card);
-            index++;
         }
     }
 
@@ -81,7 +96,7 @@ public class InformationActivity extends AppCompatActivity {
                 } else if (event == XmlPullParser.TEXT) {
                     String text = parser.getText().trim();
                     if (text.isEmpty()) { event = parser.next(); continue; }
-                    if ("title".equals(tag))       entry.title = text;
+                    if ("title".equals(tag))        entry.title = text;
                     else if ("version".equals(tag)) entry.version = text;
                     else if ("item".equals(tag))    entry.items.add(text);
                     else if ("date".equals(tag))    entry.date = text;
