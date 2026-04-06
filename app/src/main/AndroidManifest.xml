@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocably">
         <activity
+            android:name=".FeedbackSheet"
+            android:exported="false" />
+        <activity
             android:name=".SpeedAnswerActivity"
             android:exported="false" />
         <activity
@@ -53,7 +56,6 @@
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -77,7 +77,12 @@ public class HomeActivity extends AppCompatActivity {
             closeMenu();
             startActivity(new Intent(this, ProfileActivity.class));
         });
-        settingsMenu.findViewById(R.id.menuItemFeedback).setOnClickListener(v -> closeMenu());
+
+        settingsMenu.findViewById(R.id.menuItemFeedback).setOnClickListener(v -> {
+            closeMenu();
+            new FeedbackSheet().show(getSupportFragmentManager(), "feedback");
+        });
+
         settingsMenu.findViewById(R.id.menuItemInfo).setOnClickListener(v -> closeMenu());
 
         createUserCollection();
@@ -98,10 +103,7 @@ public class HomeActivity extends AppCompatActivity {
                 .withEndAction(() -> {
                     menuScrim.setVisibility(View.VISIBLE);
                     menuScrim.setAlpha(0f);
-                    menuScrim.animate()
-                            .alpha(1f)
-                            .setDuration(180)
-                            .start();
+                    menuScrim.animate().alpha(1f).setDuration(180).start();
 
                     settingsMenu.setVisibility(View.VISIBLE);
                     settingsMenu.setAlpha(0f);
@@ -110,9 +112,7 @@ public class HomeActivity extends AppCompatActivity {
                     settingsMenu.setPivotY(settingsMenu.getHeight());
 
                     settingsMenu.animate()
-                            .alpha(1f)
-                            .translationY(0f)
-                            .scaleY(1f)
+                            .alpha(1f).translationY(0f).scaleY(1f)
                             .setDuration(280)
                             .setInterpolator(new OvershootInterpolator(1.1f))
                             .start();
@@ -124,15 +124,12 @@ public class HomeActivity extends AppCompatActivity {
         menuOpen = false;
 
         menuScrim.animate()
-                .alpha(0f)
-                .setDuration(150)
+                .alpha(0f).setDuration(150)
                 .withEndAction(() -> menuScrim.setVisibility(View.GONE))
                 .start();
 
         settingsMenu.animate()
-                .alpha(0f)
-                .translationY(40f)
-                .scaleY(0.88f)
+                .alpha(0f).translationY(40f).scaleY(0.88f)
                 .setDuration(180)
                 .setInterpolator(new DecelerateInterpolator())
                 .withEndAction(() -> {
@@ -141,8 +138,7 @@ public class HomeActivity extends AppCompatActivity {
                     settingsMenu.setScaleY(1f);
 
                     btnSettings.animate()
-                            .rotationBy(-405f)
-                            .setDuration(650)
+                            .rotationBy(-405f).setDuration(650)
                             .setInterpolator(new DecelerateInterpolator())
                             .start();
                 })
