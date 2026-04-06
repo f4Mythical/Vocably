@@ -32,12 +32,13 @@ public class WordListActivity extends AppCompatActivity {
     public static final String EXTRA_UNIT_NUMBER     = "unit_number";
     public static final String EXTRA_SECTION_NUMBERS = "section_numbers";
 
-    private static final int   ACCENT_COLOR      = 0xFFe8c84a;
     private static final int   ACCENT_TEXT_COLOR = 0xFF412402;
     private static final int   BG_CARD_COLOR     = 0xFF252429;
     private static final int   ROW_HEIGHT_DP     = 52;
     private static final int   ROW_MARGIN_DP     = 8;
     private static final int   CORNER_RADIUS_DP  = 12;
+
+    private int accentColor;
 
     private static class Word {
         String foreign, polish;
@@ -50,12 +51,12 @@ public class WordListActivity extends AppCompatActivity {
         private final float seed;
         private final float cornerR;
 
-        WaveCardView(Context ctx, int seed, float cornerR) {
+        WaveCardView(Context ctx, int seed, float cornerR, int accentColor) {
             super(ctx);
             this.seed    = seed;
             this.cornerR = cornerR;
             paintBg.setColor(BG_CARD_COLOR);
-            paintAccent.setColor(ACCENT_COLOR);
+            paintAccent.setColor(accentColor);
         }
 
         @Override
@@ -97,6 +98,8 @@ public class WordListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        accentColor = ContextCompat.getColor(this, R.color.accent_gold);
 
         String language = getIntent().getStringExtra(EXTRA_LANGUAGE);
         List<Word> words = loadWords(language);
@@ -140,27 +143,10 @@ public class WordListActivity extends AppCompatActivity {
             frameParams.setMargins(0, margin, 0, margin);
             frame.setLayoutParams(frameParams);
 
-            WaveCardView card = new WaveCardView(this, i * 13 + 7, cornerR);
+            WaveCardView card = new WaveCardView(this, i * 13 + 7, cornerR, accentColor);
             card.setLayoutParams(new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             frame.addView(card);
-
-            TextView tvPolish = new TextView(this);
-            tvPolish.setText(word.polish);
-            tvPolish.setTextSize(13f);
-            tvPolish.setTypeface(tvPolish.getTypeface(), android.graphics.Typeface.BOLD);
-            tvPolish.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
-            tvPolish.setGravity(Gravity.CENTER);
-            FrameLayout.LayoutParams leftParams = new FrameLayout.LayoutParams(0,
-                    ViewGroup.LayoutParams.MATCH_PARENT);
-            leftParams.width = FrameLayout.LayoutParams.MATCH_PARENT;
-            tvPolish.setPadding(dpToPx(8), 0, 0, 0);
-
-            FrameLayout leftHalf = new FrameLayout(this);
-            FrameLayout.LayoutParams leftHalfParams = new FrameLayout.LayoutParams(
-                    0, ViewGroup.LayoutParams.MATCH_PARENT);
-            leftHalfParams.width  = FrameLayout.LayoutParams.MATCH_PARENT;
-            leftHalf.setLayoutParams(leftHalfParams);
 
             LinearLayout splitLayout = new LinearLayout(this);
             splitLayout.setOrientation(LinearLayout.HORIZONTAL);
