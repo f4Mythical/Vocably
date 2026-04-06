@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <title>Więcej trybów quizu</title>
+    <version>1.3.0</version>
+    <changes>
+        <item>Dodano tryb Wybór z 4 opcjami odpowiedzi</item>
+        <item>Dodano tryb Szybkie fiszki z paskiem czasu</item>
+        <item>Poprawiono ładowanie słówek z plików JSON</item>
+    </changes>
+    <date>14:00 · 1 marca 2025</date>
+</info>

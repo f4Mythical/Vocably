@@ -83,7 +83,10 @@ public class HomeActivity extends AppCompatActivity {
             new FeedbackSheet().show(getSupportFragmentManager(), "feedback");
         });
 
-        settingsMenu.findViewById(R.id.menuItemInfo).setOnClickListener(v -> closeMenu());
+        settingsMenu.findViewById(R.id.menuItemInfo).setOnClickListener(v -> {
+            closeMenu();
+            startActivity(new Intent(this, InformationActivity.class));
+        });
 
         createUserCollection();
     }
