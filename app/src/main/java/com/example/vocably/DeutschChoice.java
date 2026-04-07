@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,8 +19,10 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class DeutschChoice extends AppCompatActivity {
 
@@ -34,6 +38,8 @@ public class DeutschChoice extends AppCompatActivity {
     private String currentBookFile   = null;
     private String currentBookName   = "";
     private int    currentUnitNumber = -1;
+
+    private static final String LANG = "de";
 
     private static final String[] BOOK_FILES = {
             "trends1.json", "trends2.json", "trends3.json", "trends4.json"
@@ -73,6 +79,19 @@ public class DeutschChoice extends AppCompatActivity {
         btnDirRandom.setOnClickListener(v -> selectDirection("random"));
 
         loadBooks();
+    }
+
+    private Set<String> getFavs() {
+        return new LinkedHashSet<>(getSharedPreferences("vocably_favorites", Context.MODE_PRIVATE)
+                .getStringSet("fav_" + LANG, new LinkedHashSet<>()));
+    }
+
+    private void toggleFav(String mode) {
+        Set<String> favs = getFavs();
+        if (favs.contains(mode)) favs.remove(mode);
+        else favs.add(mode);
+        getSharedPreferences("vocably_favorites", Context.MODE_PRIVATE)
+                .edit().putStringSet("fav_" + LANG, favs).apply();
     }
 
     private void loadBooks() {
@@ -285,22 +304,51 @@ public class DeutschChoice extends AppCompatActivity {
     private void showQuizModes() {
         quizContainer.removeAllViews();
 
-        for (String mode : QUIZ_MODES) {
+        Set<String> favs = getFavs();
+        List<String> ordered = new ArrayList<>();
+        for (String m : QUIZ_MODES) { if (favs.contains(m)) ordered.add(m); }
+        for (String m : QUIZ_MODES) { if (!favs.contains(m)) ordered.add(m); }
+
+        for (String mode : ordered) {
+            boolean isFav = favs.contains(mode);
+
+            FrameLayout wrapper = new FrameLayout(this);
+            LinearLayout.LayoutParams wParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(52));
+            wParams.setMargins(0, 0, 0, dpToPx(8));
+            wrapper.setLayoutParams(wParams);
+
             TextView modeBtn = new TextView(this);
             modeBtn.setText(mode);
             modeBtn.setGravity(android.view.Gravity.CENTER);
             modeBtn.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
             modeBtn.setTextSize(14f);
-            modeBtn.setBackground(ContextCompat.getDrawable(this, R.drawable.bg_btn_language));
+            modeBtn.setBackground(ContextCompat.getDrawable(this,
+                    isFav ? R.drawable.bg_btn_language_selected : R.drawable.bg_btn_language));
+            modeBtn.setLayoutParams(new FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
 
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(52));
-            params.setMargins(0, 0, 0, dpToPx(8));
-            modeBtn.setLayoutParams(params);
-            modeBtn.setPadding(0, 0, 0, 0);
+            ImageView star = new ImageView(this);
+            star.setImageResource(R.drawable.ic_star);
+            star.setVisibility(isFav ? View.VISIBLE : View.GONE);
+            FrameLayout.LayoutParams starParams = new FrameLayout.LayoutParams(dpToPx(14), dpToPx(14));
+            starParams.gravity = android.view.Gravity.TOP | android.view.Gravity.END;
+            starParams.setMargins(0, dpToPx(6), dpToPx(8), 0);
+            star.setLayoutParams(starParams);
+            star.setColorFilter(ContextCompat.getColor(this, R.color.accent_gold));
 
-            modeBtn.setOnClickListener(v -> startQuiz(mode));
-            quizContainer.addView(modeBtn);
+            wrapper.addView(modeBtn);
+            wrapper.addView(star);
+
+            final String finalMode = mode;
+            modeBtn.setOnClickListener(v -> startQuiz(finalMode));
+            modeBtn.setOnLongClickListener(v -> {
+                toggleFav(finalMode);
+                showQuizModes();
+                return true;
+            });
+
+            quizContainer.addView(wrapper);
         }
 
         quizSection.setVisibility(View.VISIBLE);
@@ -308,7 +356,7 @@ public class DeutschChoice extends AppCompatActivity {
 
     private void saveSession(String mode, List<String> sections) {
         SessionManager.Session s = new SessionManager.Session();
-        s.language   = "de";
+        s.language   = LANG;
         s.bookFile   = currentBookFile;
         s.bookName   = currentBookName;
         s.unitNumber = currentUnitNumber;
@@ -329,7 +377,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Fiszki")) {
             Intent intent = new Intent(this, FlashcardActivity.class);
-            intent.putExtra(FlashcardActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(FlashcardActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(FlashcardActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(FlashcardActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(FlashcardActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -339,7 +387,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Wpisz")) {
             Intent intent = new Intent(this, TypingActivity.class);
-            intent.putExtra(TypingActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(TypingActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(TypingActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(TypingActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(TypingActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -349,7 +397,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Wybór")) {
             Intent intent = new Intent(this, ChoiceActivity.class);
-            intent.putExtra(ChoiceActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(ChoiceActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(ChoiceActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(ChoiceActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(ChoiceActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -359,7 +407,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Szybkie fiszki")) {
             Intent intent = new Intent(this, QuickFlashcardActivity.class);
-            intent.putExtra(QuickFlashcardActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(QuickFlashcardActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(QuickFlashcardActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(QuickFlashcardActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(QuickFlashcardActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -369,7 +417,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Memory")) {
             Intent intent = new Intent(this, MemorySetupActivity.class);
-            intent.putExtra(MemorySetupActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(MemorySetupActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(MemorySetupActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(MemorySetupActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(MemorySetupActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -389,7 +437,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Szybka odpowiedź")) {
             Intent intent = new Intent(this, SpeedAnswerActivity.class);
-            intent.putExtra(SpeedAnswerActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(SpeedAnswerActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(SpeedAnswerActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(SpeedAnswerActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(SpeedAnswerActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -399,7 +447,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Lista")) {
             Intent intent = new Intent(this, WordListActivity.class);
-            intent.putExtra(WordListActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(WordListActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(WordListActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(WordListActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(WordListActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -409,7 +457,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Litera po literze")) {
             Intent intent = new Intent(this, LetterByLetterActivity.class);
-            intent.putExtra(LetterByLetterActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(LetterByLetterActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(LetterByLetterActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(LetterByLetterActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(LetterByLetterActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -419,7 +467,7 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Prawda czy Fałsz")) {
             Intent intent = new Intent(this, TrueFalseActivity.class);
-            intent.putExtra(TrueFalseActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(TrueFalseActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(TrueFalseActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(TrueFalseActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(TrueFalseActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
@@ -429,12 +477,11 @@ public class DeutschChoice extends AppCompatActivity {
 
         if (mode.equals("Ułóż słowo")) {
             Intent intent = new Intent(this, ScrambleActivity.class);
-            intent.putExtra(ScrambleActivity.EXTRA_LANGUAGE, "de");
+            intent.putExtra(ScrambleActivity.EXTRA_LANGUAGE, LANG);
             intent.putExtra(ScrambleActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(ScrambleActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(ScrambleActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
             startActivity(intent);
-            return;
         }
     }
 
