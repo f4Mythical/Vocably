@@ -46,7 +46,7 @@ public class EnglishChoice extends AppCompatActivity {
     };
 
     private static final String[] QUIZ_MODES = {
-            "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
+            "Wyszukiwanie", "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
             "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista",
             "Litera po literze", "Prawda czy Fałsz", "Ułóż słowo"
     };
@@ -482,6 +482,16 @@ public class EnglishChoice extends AppCompatActivity {
             intent.putExtra(ScrambleActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(ScrambleActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
             startActivity(intent);
+        }
+
+        if (mode.equals("Wyszukiwanie")) {
+            Intent intent = new Intent(this, SearchActivity.class);
+            intent.putExtra(SearchActivity.EXTRA_LANGUAGE, LANG);
+            intent.putExtra(SearchActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(SearchActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(SearchActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
         }
     }
 
