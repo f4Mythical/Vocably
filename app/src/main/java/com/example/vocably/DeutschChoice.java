@@ -48,7 +48,7 @@ public class DeutschChoice extends AppCompatActivity {
     private static final String[] QUIZ_MODES = {
             "Wyszukiwanie", "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
             "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista", "Litera po literze", "Prawda czy Fałsz",
-            "Ułóż słowo"
+            "Ułóż słowo","Der, die, das?"
     };
 
     @Override
@@ -490,6 +490,15 @@ public class DeutschChoice extends AppCompatActivity {
             intent.putExtra(SearchActivity.EXTRA_BOOK_FILE, currentBookFile);
             intent.putExtra(SearchActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
             intent.putStringArrayListExtra(SearchActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
+        if (mode.equals("Der, die, das?")) {
+            Intent intent = new Intent(this, ArticleActivity.class);
+            intent.putExtra(ArticleActivity.EXTRA_LANGUAGE, LANG);
+            intent.putExtra(ArticleActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(ArticleActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(ArticleActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
             startActivity(intent);
             return;
         }
