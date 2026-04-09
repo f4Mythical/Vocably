@@ -36,7 +36,7 @@ public class ScrambleActivity extends AppCompatActivity {
     private int     currentIndex = 0;
     private String  direction;
 
-    private List<String> letterPool     = new ArrayList<>();
+    private List<String> letterPool      = new ArrayList<>();
     private List<String> selectedLetters = new ArrayList<>();
 
     private TextView     tvProgress;
@@ -46,6 +46,7 @@ public class ScrambleActivity extends AppCompatActivity {
     private LinearLayout lettersContainer;
     private LinearLayout btnClear;
     private LinearLayout btnCheck;
+    private LinearLayout btnBackspace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,7 @@ public class ScrambleActivity extends AppCompatActivity {
         lettersContainer = findViewById(R.id.lettersContainer);
         btnClear         = findViewById(R.id.btnClear);
         btnCheck         = findViewById(R.id.btnCheck);
+        btnBackspace     = findViewById(R.id.btnBackspace);
 
         String language = getIntent().getStringExtra(EXTRA_LANGUAGE);
         String bookFile = getIntent().getStringExtra(EXTRA_BOOK_FILE);
@@ -74,6 +76,15 @@ public class ScrambleActivity extends AppCompatActivity {
 
         btnClear.setOnClickListener(v -> clearSelection());
         btnCheck.setOnClickListener(v -> checkAnswer());
+        btnBackspace.setOnClickListener(v -> backspaceLetter());
+    }
+
+    private void backspaceLetter() {
+        if (selectedLetters.isEmpty()) return;
+        String last = selectedLetters.remove(selectedLetters.size() - 1);
+        letterPool.add(last);
+        updateBuilt();
+        renderLetterButtons();
     }
 
     private void loadWords(String bookFile, int unitNumber, List<String> sections, String language) {
