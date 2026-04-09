@@ -40,9 +40,15 @@ public class HomeActivity extends AppCompatActivity {
     private boolean menuOpen = false;
 
     private final String[] greetings = {
-            "Witaj w Vocably", "Hej, miło Cię widzieć", "Cześć!",
-            "Guten Morgen!", "Hello there!", "Hi! Gotowy na naukę?",
-            "Bon jour!", "Ciao!", "¡Hola!"
+            "Witaj w Vocably",
+            "Hej, miło Cię widzieć w Vocably",
+            "Cześć w Vocably!",
+            "Willkommen bei Vocably",
+            "Welcome to Vocably",
+            "Hi! Ready to learn with Vocably?",
+            "Bonjour chez Vocably",
+            "Benvenuto in Vocably",
+            "¡Bienvenido a Vocably!"
     };
 
     @Override
