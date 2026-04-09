@@ -48,7 +48,7 @@ public class DeutschChoice extends AppCompatActivity {
     private static final String[] QUIZ_MODES = {
             "Wyszukiwanie", "Fiszki", "Wpisz", "Wybór", "Szybkie fiszki",
             "Losowa nauka", "Memory", "Szybka odpowiedź", "Lista", "Litera po literze", "Prawda czy Fałsz",
-            "Ułóż słowo","Der, die, das?"
+            "Ułóż słowo","Der, die, das?","Słowo po słowie"
     };
 
     @Override
@@ -502,6 +502,17 @@ public class DeutschChoice extends AppCompatActivity {
             startActivity(intent);
             return;
         }
+
+        if (mode.equals("Słowo po słowie")) {
+            Intent intent = new Intent(this, WordByWordActivity.class);
+            intent.putExtra(WordByWordActivity.EXTRA_LANGUAGE, LANG);
+            intent.putExtra(WordByWordActivity.EXTRA_BOOK_FILE, currentBookFile);
+            intent.putExtra(WordByWordActivity.EXTRA_UNIT_NUMBER, currentUnitNumber);
+            intent.putStringArrayListExtra(WordByWordActivity.EXTRA_SECTION_NUMBERS, new ArrayList<>(sections));
+            startActivity(intent);
+            return;
+        }
+
     }
 
     private void selectDirection(String dir) {
